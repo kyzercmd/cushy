@@ -2,7 +2,7 @@ import Logo from "../../assets/logoblue-removebg.png";
 
 export const Header = () => {
   return (
-    <div className="navbar bg-blue-50 shadow-sm py-1">
+    <div className="sticky z-50 top-1 shadow-xl navbar bg-blue-100 py-1">
       <div className="w-full md:max-w-10/12 m-auto flex justify-between">
         <div className="navbar-start">
           <div className="dropdown">
@@ -60,7 +60,7 @@ export const Header = () => {
               <a className="rounded-lg py-2 px-4">Products</a>
             </li>
             <li>
-              <a className="rounded-lg py-2 px-4">Cart</a>
+              <a className="rounded-lg py-2 px-4">Help</a>
             </li>
           </ul>
         </div>
