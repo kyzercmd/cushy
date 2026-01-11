@@ -5,7 +5,7 @@ import hero4 from "../../assets/hero4.png";
 
 export const Hero = () => {
   return (
-    <div className="md:w-10/12 m-auto flex mt-15 justify-between">
+    <div className="md:max-w-5xl m-auto flex mt-15 justify-between">
       <div className="flex-col flex gap-10 lg:max-w-1/2 mt-5 lg:pr-20 ml-5">
         <div className="text-6xl font-bold text-[#394E6A]">
           We are changing the way people shop
@@ -16,7 +16,7 @@ export const Hero = () => {
           voluptate.
         </p>
         <div className="">
-          <button className="py-4 px-6 font-semibold bg-blue-500 text-slate-200 text-xs hover:cursor-pointer rounded-box">
+          <button className="py-4 px-6 font-semibold bg-blue-500 text-slate-200 text-xs hover:cursor-pointer rounded-box shadow-2xl">
             OUR PRODUCTS
           </button>
         </div>

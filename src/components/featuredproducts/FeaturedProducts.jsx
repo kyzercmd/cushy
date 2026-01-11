@@ -7,11 +7,11 @@ export const FeaturedProducts = () => {
     isLoading,
     error,
     isError,
-  } = useProductFetch(true);
+  } = useProductFetch({ featured: true });
   if (isError) return <div>Error: {error.message}</div>;
   if (isLoading) return <div>Loading...</div>;
   return (
-    <div className="max-w-10/12 m-auto">
+    <div className="max-w-5xl m-auto">
       <div className=" text-[#394E6A] text-3xl tracking-widest mt-20">
         Featured Products
       </div>

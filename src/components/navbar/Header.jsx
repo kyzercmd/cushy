@@ -1,9 +1,10 @@
 import Logo from "../../assets/logoblue-removebg.png";
+import { Link, NavLink } from "react-router-dom";
 
 export const Header = () => {
   return (
-    <div className="sticky z-50 top-1 shadow-xl navbar bg-blue-100 py-1">
-      <div className="w-full md:max-w-10/12 m-auto flex justify-between">
+    <div className="sticky z-50 top-1 shadow-xl navbar bg-sky-50 py-1">
+      <div className="w-full md:max-w-6xl m-auto flex justify-between">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -28,39 +29,112 @@ export const Header = () => {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
               <li>
-                <a className="bg-[#021431]">Home</a>
+                <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "active bg-[#021431] rounded-lg py-2 px-3 text-slate-200"
+                      : "rounded-lg py-2 px-3 text-slate-700"
+                  }
+                >
+                  Home
+                </NavLink>
               </li>
               <li>
-                <a>Item 2</a>
+                <NavLink
+                  to="/about"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "active bg-[#021431] rounded-lg py-2 px-3 text-slate-200"
+                      : "rounded-lg py-2 px-3 text-slate-700"
+                  }
+                >
+                  About us
+                </NavLink>
               </li>
               <li>
-                <a>Item 3</a>
+                <NavLink
+                  to="/products"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "active bg-[#021431] rounded-lg py-2 px-3 text-slate-200"
+                      : "rounded-lg py-2 px-3 text-slate-700"
+                  }
+                >
+                  Products
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/contact"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "active bg-[#021431] rounded-lg py-2 px-3 text-slate-200"
+                      : "rounded-lg py-2 px-3 text-slate-700"
+                  }
+                >
+                  Contact
+                </NavLink>
               </li>
             </ul>
           </div>
-          <a className="text-xl">
+          <Link to="/" className="text-xl">
             <img
               onClick=""
               className="hover:cursor-pointer h-10 w-20"
               src={Logo}
             ></img>
-          </a>
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal">
             <li>
-              <a className="bg-[#021431] text-slate-300 rounded-lg py-2 px-4">
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive
+                    ? "active bg-[#021431] rounded-lg py-2 px-3 text-slate-200"
+                    : "rounded-lg py-2 px-3 text-slate-700"
+                }
+              >
                 Home
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a className="rounded-lg py-2 px-4">About</a>
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  isActive
+                    ? "active bg-[#021431] rounded-lg py-2 px-3 text-slate-200"
+                    : "rounded-lg py-2 px-3 text-slate-700"
+                }
+              >
+                About us
+              </NavLink>
             </li>
             <li>
-              <a className="rounded-lg py-2 px-4">Products</a>
+              <NavLink
+                to="/products"
+                className={({ isActive }) =>
+                  isActive
+                    ? "active bg-[#021431] rounded-lg py-2 px-3 text-slate-200"
+                    : "rounded-lg py-2 px-3 text-slate-700"
+                }
+              >
+                Products
+              </NavLink>
             </li>
             <li>
-              <a className="rounded-lg py-2 px-4">Help</a>
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  isActive
+                    ? "active bg-[#021431] rounded-lg py-2 px-3 text-slate-200"
+                    : "rounded-lg py-2 px-3 text-slate-700"
+                }
+              >
+                Contact
+              </NavLink>
             </li>
           </ul>
         </div>
