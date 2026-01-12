@@ -1,6 +1,7 @@
 export const ProductCard = ({ product }) => {
   return (
     <div className="w-full rounded-xl h-80 m-auto hover:bg-gray-100 shadow-xl  hover:shadow-2xl hover:cursor-pointer">
+      <div></div>
       <div className="h-full w-full px-5 pt-2">
         <img
           src={product.image_path}
@@ -20,8 +21,8 @@ export const ProductCard = ({ product }) => {
             </div>
           </div>
           <div className="flex flex-row gap-2 mt-1">
-            <div className="text-slate-200 font-semibold rounded-box text-sm  bg-slate-500 hover:cursor-pointer px-2 py-2 flex items-center hover:shadow-2xl hover:bg-slate-800 ">
-              Add to Cart +
+            <div className="btn btn-sm btn-ghost text-slate-200 font-semibold rounded-box text-sm  bg-blue-500 hover:cursor-pointer py-4 flex items-center hover:shadow-2xl hover:bg-blue-300 ">
+              Add to Cart
             </div>
           </div>
         </div>

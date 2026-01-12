@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useProductFetch } from "../hooks/useProductFetch";
 import { ProductCard } from "../ui/ProductCard";
+import { SearchFilter } from "../components/searchfilter/SearchFilter";
 
 export const AllProducts = () => {
   //const [ view, setview ] = useState(1);
@@ -23,6 +24,7 @@ export const AllProducts = () => {
 
   return (
     <div>
+      <SearchFilter />
       <div className="max-w-5xl m-auto">
         <div className=" text-[#394E6A] text-xl tracking-widest mt-20">
           {totalItems} Products

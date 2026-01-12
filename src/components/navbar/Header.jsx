@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 
 export const Header = () => {
   return (
-    <div className="sticky z-50 top-1 shadow-xl navbar bg-sky-50 py-1">
+    <div className="sticky z-50 top-1 shadow-xl navbar bg-blue-50 py-1">
       <div className="w-full md:max-w-6xl m-auto flex justify-between">
         <div className="navbar-start">
           <div className="dropdown">
@@ -49,7 +49,7 @@ export const Header = () => {
                       : "rounded-lg py-2 px-3 text-slate-700"
                   }
                 >
-                  About us
+                  About
                 </NavLink>
               </li>
               <li>
@@ -109,7 +109,7 @@ export const Header = () => {
                     : "rounded-lg py-2 px-3 text-slate-700"
                 }
               >
-                About us
+                About
               </NavLink>
             </li>
             <li>

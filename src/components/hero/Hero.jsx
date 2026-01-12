@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import hero1 from "../../assets/hero1.png";
 import hero2 from "../../assets/hero2.png";
 import hero3 from "../../assets/hero3.png";
@@ -16,9 +18,12 @@ export const Hero = () => {
           voluptate.
         </p>
         <div className="">
-          <button className="py-4 px-6 font-semibold bg-blue-500 text-slate-200 text-xs hover:cursor-pointer rounded-box shadow-2xl">
+          <Link
+            to="/products"
+            className="btn btn-ghost py-6 px-8 font-semibold bg-blue-500 text-slate-200 text-sm hover:cursor-pointer rounded-box shadow-2xl"
+          >
             OUR PRODUCTS
-          </button>
+          </Link>
         </div>
       </div>
       <div className="mr-5 hidden lg:block">
