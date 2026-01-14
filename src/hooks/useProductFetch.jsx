@@ -1,16 +1,33 @@
 import { useQuery, keepPreviousData } from "@tanstack/react-query";
 
-export const useProductFetch = ({ page = 1, limit = 10, featured = false }) => {
+export const useProductFetch = ({
+  page = 1,
+  limit = 12,
+  featured = false,
+  search = "",
+  category = "all",
+  woodType = "all",
+  sortBy = "name_asc",
+  maxPrice = 2000,
+}) => {
   return useQuery({
-    queryKey: ["products", { page, limit, featured }],
+    queryKey: [
+      "products",
+      { page, limit, featured, search, category, woodType, sortBy, maxPrice },
+    ],
     queryFn: async () => {
       const fetchLimit = featured ? 9 : limit;
       const offset = (page - 1) * limit;
+      let url = `https://furniture-api.fly.dev/v1/products?limit=${fetchLimit}&offset=${offset}`;
+
+      if (search) url += `&name=${search}`;
+      if (category != "all") url += `&category=${category}`;
+      if (woodType != "all") url += `&wood_type=${woodType}`;
+      if (sortBy != "name_asc") url += `&sort=${sortBy}`;
+      if (maxPrice < 2000) url += `&max_price=${maxPrice}`;
 
       console.log("Fetching products now...");
-      const response = await fetch(
-        `https://furniture-api.fly.dev/v1/products?limit=${fetchLimit}&offset=${offset}`
-      );
+      const response = await fetch(url);
       console.log("test");
       if (!response.ok) throw new Error("Failed to fetch products");
       return await response.json();
@@ -19,6 +36,6 @@ export const useProductFetch = ({ page = 1, limit = 10, featured = false }) => {
       if (featured) return data.data.filter((p) => p.featured === true);
       return data;
     },
-    placeholderData: keepPreviousData,
+    //placeholderData: keepPreviousData,
   });
 };

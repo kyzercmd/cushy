@@ -6,33 +6,58 @@ import { SearchFilter } from "../components/searchfilter/SearchFilter";
 
 export const AllProducts = () => {
   //const [ view, setview ] = useState(1);
-  //const [search];
-  const [page, setPage] = useState(1);
-  const limit = 12;
-  const {
-    data: items,
-    error,
-    isError,
-    isLoading,
-  } = useProductFetch({ page, limit });
+
+  const [activeFilters, setActiveFilters] = useState({
+    page: 1,
+    search: "",
+    category: "all",
+    woodType: "all",
+    sortBy: "name_asc",
+    maxPrice: 2000,
+  });
+  const { data, isLoading, error, isError } = useProductFetch(activeFilters);
+
+  const handleSearch = (newFilters) => {
+    setActiveFilters({ ...newFilters, page: 1 });
+  };
+  const handlePageChange = (newPage) => {
+    setActiveFilters((prev) => ({ ...prev, page: newPage }));
+  };
+  const handleReset = () => {
+    setActiveFilters({
+      search: "",
+      category: "all",
+      woodType: "all",
+      sortBy: "name_asc",
+      maxPrice: 2000,
+    });
+  };
 
   if (isError) return <div>Error: {error.message}</div>;
-  if (isLoading) return <div>Loading...</div>;
+  //if (isLoading) return <div className="loading loading-ring loading-xl"></div>;
 
-  const totalItems = items.count;
+  const limit = 12;
+  const totalItems = data?.count || 0;
   const totalPages = Math.ceil(totalItems / limit);
+  const currentPage = activeFilters.page;
 
   return (
     <div>
-      <SearchFilter />
+      <SearchFilter onSearch={handleSearch} onReset={handleReset} />
       <div className="max-w-5xl m-auto">
-        <div className=" text-[#394E6A] text-xl tracking-widest mt-20">
+        <div className=" text-[#394E6A] text-xl tracking-widest mt-10">
           {totalItems} Products
         </div>
-        <div className="border-b border-slate-300 mt-5 mb-10"></div>
+        <div
+          className={
+            isLoading
+              ? "loading loading-ring loading-xl m-auto flex h-100"
+              : "border-b border-slate-300 mt-5 mb-10"
+          }
+        ></div>
         <div className="w-full h-full grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
-          {items.data.map((item) => (
-            <ProductCard key={item.id} product={item} />
+          {data?.data.map((item) => (
+            <ProductCard key={item.id} product={item} loading={isLoading} />
           ))}
         </div>
       </div>
@@ -41,39 +66,39 @@ export const AllProducts = () => {
         <div className="join rounded-box shadow-2xl">
           <button
             onClick={() => {
-              setPage((old) => Math.max(old - 1, 1));
+              handlePageChange(Math.max(currentPage - 1, 1));
             }}
-            disabled={page === 1}
+            disabled={currentPage === 1}
             className="join-item btn text-slate-700 bg-sky-50 disabled:text-gray-400"
           >
             PREV
           </button>
           <button className="join-item btn btn-active text-slate-700 bg-sky-200 disabled:text-gray-400">
-            {page}
+            {currentPage}
           </button>
           <button
             onClick={() => {
-              setPage((old) => Math.max(old + 1, 1));
+              handlePageChange(Math.max(currentPage + 1, 1));
             }}
-            disabled={page === totalPages}
+            disabled={currentPage === totalPages}
             className="join-item btn text-slate-700 bg-sky-50 disabled:text-gray-400"
           >
-            {page + 1}
+            {currentPage + 1}
           </button>
           <button
             onClick={() => {
-              setPage((old) => Math.max(old + 2, 1));
+              handlePageChange(Math.max(currentPage + 2, 1));
             }}
-            disabled={page === totalPages}
+            disabled={currentPage === totalPages}
             className="join-item btn text-slate-700 bg-sky-50 disabled:text-gray-400"
           >
-            {page + 2}
+            {currentPage + 2}
           </button>
           <button
             onClick={() => {
-              setPage((old) => Math.max(old + 1, 1));
+              handlePageChange(Math.max(currentPage + 1, 1));
             }}
-            disabled={page === totalPages}
+            disabled={currentPage === totalPages}
             className="join-item btn text-slate-700 bg-sky-50 disabled:text-gray-400"
           >
             NEXT

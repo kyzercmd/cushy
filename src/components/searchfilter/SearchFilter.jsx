@@ -1,84 +1,162 @@
 import React from "react";
 import { useState } from "react";
 
-export const SearchFilter = () => {
-  const [filterPrice, setFilterPrice] = useState(1000);
+export const SearchFilter = ({ onSearch, onReset }) => {
+  const [filters, setFilters] = useState({
+    search: "",
+    category: "all",
+    woodType: "all",
+    sortBy: "name_asc",
+    maxPrice: 2000,
+  });
 
   return (
-    <div className="max-w-5xl bg-blue-50 m-auto flex flex-col mt-15 p-5">
+    <div className="max-w-5xl bg-blue-50 m-auto flex flex-col mt-10 p-5 rounded-2xl">
       <div className="flex flex-wrap justify-around">
         <div>
           <fieldset className="fieldset w-55">
-            <legend className="fieldset-legend text-slate-600 text-xs">
+            <legend className="fieldset-legend text-slate-700">
               Search Product
             </legend>
             <input
               type="text"
-              className="input input-sm rounded-box"
+              className="input input-sm rounded-box text-sm text-slate-600"
               placeholder="Type here"
+              value={filters.search}
+              onChange={(e) => {
+                setFilters({ ...filters, search: e.target.value });
+              }}
             />
           </fieldset>
         </div>
         <div className="">
           <fieldset className="fieldset w-55">
-            <legend className="fieldset-legend text-slate-600 font-semibold">
+            <legend className="fieldset-legend text-slate-700">
               Select Category
             </legend>
             <select
-              defaultValue="all"
-              className="select select-sm rounded-box text-slate-600 font-semibold"
+              value={filters.category}
+              className="select select-sm rounded-box text-slate-600 text-sm"
+              onChange={(e) => {
+                setFilters({ ...filters, category: e.target.value });
+              }}
             >
               <option>all</option>
-              <option>Chrome</option>
-              <option>FireFox</option>
-              <option>Safari</option>
+              <option>sofa</option>
+              <option>chair</option>
+              <option>table</option>
+              <option>desk</option>
+              <option>kitchen</option>
+              <option>vanitory</option>
+              <option>matress</option>
+              <option>mirror</option>
+              <option>wardrove</option>
+              <option>lamp</option>
+              <option>tv table</option>
+              <option>garden</option>
             </select>
           </fieldset>
         </div>
         <div className="">
           <fieldset className="fieldset w-55">
-            <legend className="fieldset-legend text-slate-600">
+            <legend className="fieldset-legend text-slate-700">
               Select Wood Type
             </legend>
             <select
-              defaultValue="all"
-              className="select select-sm rounded-box text-slate-600 font-semibold"
+              value={filters.woodType}
+              className="select select-sm rounded-box text-slate-600 text-sm"
+              onChange={(e) => {
+                setFilters({ ...filters, woodType: e.target.value });
+              }}
             >
               <option>all</option>
-              <option>Chrome</option>
-              <option>FireFox</option>
-              <option>Safari</option>
+              <option>walnut</option>
+              <option>maple</option>
+              <option>pine</option>
+              <option>eucalyptus</option>
+              <option>bamboo</option>
+              <option>teak</option>
+              <option>cedar</option>
             </select>
           </fieldset>
         </div>
         <div className="">
           <fieldset className="fieldset w-55">
-            <legend className="fieldset-legend text-slate-600">Sort By</legend>
+            <legend className="fieldset-legend text-slate-700 ">Sort By</legend>
             <select
-              defaultValue="all"
-              className="select select-sm rounded-box text-slate-600 font-semibold"
+              value={filters.sortBy}
+              className="select select-sm rounded-box text-slate-600 text-sm"
+              onChange={(e) => {
+                setFilters({ ...filters, sortBy: e.target.value });
+              }}
             >
-              <option>all</option>
-              <option>Chrome</option>
-              <option>FireFox</option>
-              <option>Safari</option>
+              <option>name_asc</option>
+              <option>name_desc</option>
+              <option>newest</option>
+              <option>oldest</option>
+              <option>price_desc</option>
+              <option>price_asc</option>
             </select>
           </fieldset>
         </div>
       </div>
-      <div>
-        <div>
-          <p>{filterPrice}</p>
+      <div className="flex justify-around flex-wrap mt-5 items-center">
+        <div className="w-55">
+          <div className="flex justify-between">
+            <p className="text-sm text-slate-700">Select Price</p>
+            <p className="text-base text-slate-700 font-semibold">
+              ${filters.maxPrice}
+            </p>
+          </div>
           <input
             type="range"
             min={0}
-            max="1000"
-            value={filterPrice}
+            max="2000"
+            value={filters.maxPrice}
             onChange={(e) => {
-              setFilterPrice(e.target.value);
+              setFilters({ ...filters, maxPrice: e.target.value });
             }}
             className="range range-sm text-blue-500 [--range-bg:gray] [--range-thumb:white]"
           />
+        </div>
+        <div className="mt-2">
+          <fieldset className="fieldset rounded-box w-55">
+            <label className="label">
+              <input
+                type="checkbox"
+                defaultChecked
+                className="checkbox checkbox-sm"
+              />
+              On sale
+            </label>
+          </fieldset>
+        </div>
+        <div className="">
+          <button
+            className="btn rounded-box w-55 btn-sm bg-blue-500 text-slate-200"
+            onClick={() => {
+              onSearch(filters);
+            }}
+          >
+            SEARCH
+          </button>
+        </div>
+        <div>
+          <button
+            className="btn btn-ghost rounded-box w-55 btn-sm text-xs bg-[#c149ad] text-slate-200"
+            onClick={() => {
+              setFilters({
+                search: "",
+                category: "all",
+                woodType: "all",
+                sortBy: "name_asc",
+                maxPrice: 2000,
+              });
+              onReset();
+            }}
+          >
+            RESET
+          </button>
         </div>
       </div>
     </div>
