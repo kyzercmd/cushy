@@ -1,10 +1,10 @@
 import React from "react";
 import { useState } from "react";
 
-export const SearchFilter = ({ onSearch, onReset }) => {
+export const SearchFilter = ({ onSearch, onReset, selectedCategory }) => {
   const [filters, setFilters] = useState({
     search: "",
-    category: "all",
+    category: selectedCategory ? selectedCategory : "all",
     woodType: "all",
     sortBy: "name_asc",
     maxPrice: 2000,
@@ -122,11 +122,7 @@ export const SearchFilter = ({ onSearch, onReset }) => {
         <div className="mt-2">
           <fieldset className="fieldset rounded-box w-55">
             <label className="label">
-              <input
-                type="checkbox"
-                defaultunChecked
-                className="checkbox checkbox-sm"
-              />
+              <input type="checkbox" className="checkbox checkbox-sm" />
               On sale
             </label>
           </fieldset>

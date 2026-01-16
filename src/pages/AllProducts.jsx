@@ -1,16 +1,19 @@
 import React from "react";
 import { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { useProductFetch } from "../hooks/useProductFetch";
 import { ProductCard } from "../ui/ProductCard";
 import { SearchFilter } from "../components/searchfilter/SearchFilter";
 
 export const AllProducts = () => {
   //const [ view, setview ] = useState(1);
+  const [SearchParams] = useSearchParams();
+  const selectedCategory = SearchParams.get("category");
 
   const [activeFilters, setActiveFilters] = useState({
     page: 1,
     search: "",
-    category: "all",
+    category: selectedCategory ? selectedCategory : "all",
     woodType: "all",
     sortBy: "name_asc",
     maxPrice: 2000,
@@ -43,7 +46,11 @@ export const AllProducts = () => {
 
   return (
     <div>
-      <SearchFilter onSearch={handleSearch} onReset={handleReset} />
+      <SearchFilter
+        onSearch={handleSearch}
+        onReset={handleReset}
+        selectedCategory={selectedCategory}
+      />
       <div className="max-w-5xl m-auto">
         <div className=" text-[#394E6A] text-xl tracking-widest mt-10">
           {totalItems} Products

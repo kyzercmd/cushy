@@ -23,16 +23,14 @@ export const useCategoryFetch = () => {
         let url = `https://furniture-api.fly.dev/v1/products?category=${category}`;
         const response = await fetch(url);
         if (!response.ok) return null;
-        const json = response.json();
+        const json = await response.json();
 
         return json.data.length > 0 ? json.data[0] : null;
       });
 
       const results = await Promise.all(promises);
 
-      return results.filter((item) => {
-        item !== null;
-      });
+      return results.filter((item) => item !== null);
     },
   });
 };

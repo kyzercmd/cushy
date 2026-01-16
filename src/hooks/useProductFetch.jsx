@@ -36,6 +36,7 @@ export const useProductFetch = ({
       if (featured) return data.data.filter((p) => p.featured === true);
       return data;
     },
-    //placeholderData: keepPreviousData,
+    refetchOnWindowFocus: false,
+    placeholderData: keepPreviousData,
   });
 };

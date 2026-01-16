@@ -8,7 +8,7 @@ export const FeaturedProducts = () => {
     isLoading,
     error,
     isError,
-  } = useProductFetch({ category: "kitchen" });
+  } = useProductFetch({ category: "kitchen", featured: true });
   if (isError) return <div>Error: {error.message}</div>;
   //if (isLoading) return <div>Loading...</div>;
   return (
@@ -33,7 +33,7 @@ export const FeaturedProducts = () => {
         }
       ></div>
       <div className="w-full h-full grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
-        {featuredItems?.data.map((item) => (
+        {featuredItems?.map((item) => (
           <ProductCard key={item.id} product={item} />
         ))}
       </div>
