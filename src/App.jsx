@@ -18,6 +18,7 @@ function App() {
       <>
         <Profilebar />
         <Header />
+
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="products" element={<AllProducts />}></Route>

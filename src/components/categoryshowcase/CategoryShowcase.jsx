@@ -10,10 +10,6 @@ import "swiper/css/navigation";
 export const CategoryShowcase = () => {
   const { data, isLoading, isError } = useCategoryFetch();
 
-  const handleCategorySelection = () => {
-    <Link to="/products"></Link>;
-  };
-
   if (isError) return <div>Error.</div>;
   console.log(data);
 
