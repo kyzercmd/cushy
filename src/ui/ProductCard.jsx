@@ -1,6 +1,6 @@
 export const ProductCard = ({ product }) => {
   return (
-    <div className="group w-full rounded-xl h-80 m-auto hover:bg-gray-100 shadow-xl  hover:shadow-2xl hover:cursor-pointer border border-base-100">
+    <div className="group w-full rounded-xl h-80 m-auto hover:bg-gray-200 shadow-xl  hover:shadow-2xl hover:cursor-pointer">
       <div></div>
       <div className="h-full w-full px-5 pt-2">
         <div className="h-55 w-full overflow-hidden rounded-xl">
