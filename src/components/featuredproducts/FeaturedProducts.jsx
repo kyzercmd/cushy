@@ -1,5 +1,6 @@
 import { useProductFetch } from "../../hooks/useProductFetch";
 import { ProductCard } from "../../ui/ProductCard";
+import { Link } from "react-router-dom";
 
 export const FeaturedProducts = () => {
   const {
@@ -12,9 +13,18 @@ export const FeaturedProducts = () => {
   //if (isLoading) return <div>Loading...</div>;
   return (
     <div className="max-w-5xl m-auto">
-      <div className=" text-[#394E6A] text-3xl tracking-widest mt-20">
-        Featured Products
+      <div className="flex justify-between mt-20 items-end">
+        <div className=" text-[#394E6A] text-3xl tracking-widest">
+          Featured Collection
+        </div>
+        <Link
+          to="/products"
+          className="text-[#141b24] font-semibold text-sm hover:-translate-x-1 transition-transform duration-300 hover:cursor-pointer hover:link"
+        >
+          View All
+        </Link>
       </div>
+
       <div
         className={
           isLoading

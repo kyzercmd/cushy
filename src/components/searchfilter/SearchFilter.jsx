@@ -124,7 +124,7 @@ export const SearchFilter = ({ onSearch, onReset }) => {
             <label className="label">
               <input
                 type="checkbox"
-                defaultChecked
+                defaultunChecked
                 className="checkbox checkbox-sm"
               />
               On sale
