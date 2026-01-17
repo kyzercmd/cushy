@@ -12,7 +12,7 @@ export const FeaturedProducts = () => {
   if (isError) return <div>Error: {error.message}</div>;
   //if (isLoading) return <div>Loading...</div>;
   return (
-    <div className="max-w-5xl m-auto">
+    <div className="max-w-6xl m-auto">
       <div className="flex justify-between mt-20 items-end">
         <div className=" text-[#394E6A] text-3xl tracking-widest">
           Featured Collection
@@ -32,7 +32,7 @@ export const FeaturedProducts = () => {
             : "border-b border-slate-300 mt-5 mb-10"
         }
       ></div>
-      <div className="w-full h-full grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
+      <div className="w-full h-full grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
         {featuredItems?.map((item) => (
           <ProductCard key={item.id} product={item} />
         ))}

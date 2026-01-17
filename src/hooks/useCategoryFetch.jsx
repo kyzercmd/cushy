@@ -32,5 +32,6 @@ export const useCategoryFetch = () => {
 
       return results.filter((item) => item !== null);
     },
+    staleTime: 1000 * 60 * 10,
   });
 };

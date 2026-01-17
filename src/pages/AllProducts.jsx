@@ -51,7 +51,7 @@ export const AllProducts = () => {
         onReset={handleReset}
         selectedCategory={selectedCategory}
       />
-      <div className="max-w-5xl m-auto">
+      <div className="max-w-6xl m-auto">
         <div className=" text-[#394E6A] text-xl tracking-widest mt-10">
           {totalItems} Products
         </div>
@@ -62,7 +62,7 @@ export const AllProducts = () => {
               : "border-b border-slate-300 mt-5 mb-10"
           }
         ></div>
-        <div className="w-full h-full grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
+        <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
           {data?.data.map((item) => (
             <ProductCard key={item.id} product={item} loading={isLoading} />
           ))}
@@ -76,11 +76,11 @@ export const AllProducts = () => {
               handlePageChange(Math.max(currentPage - 1, 1));
             }}
             disabled={currentPage === 1}
-            className="join-item btn text-slate-700 bg-sky-50 disabled:text-gray-400"
+            className="join-item btn text-slate-700 bg-blue-50 disabled:text-gray-400"
           >
             PREV
           </button>
-          <button className="join-item btn btn-active text-slate-700 bg-sky-200 disabled:text-gray-400">
+          <button className="join-item btn btn-active text-slate-700 bg-blue-200 disabled:text-gray-400">
             {currentPage}
           </button>
           <button
@@ -88,7 +88,7 @@ export const AllProducts = () => {
               handlePageChange(Math.max(currentPage + 1, 1));
             }}
             disabled={currentPage === totalPages}
-            className="join-item btn text-slate-700 bg-sky-50 disabled:text-gray-400"
+            className="join-item btn text-slate-700 bg-blue-50 disabled:text-gray-400"
           >
             {currentPage + 1}
           </button>

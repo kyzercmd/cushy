@@ -11,7 +11,7 @@ export const SearchFilter = ({ onSearch, onReset, selectedCategory }) => {
   });
 
   return (
-    <div className="max-w-5xl bg-blue-50 m-auto flex flex-col mt-10 p-5 rounded-2xl">
+    <div className="max-w-6xl bg-blue-50 m-auto flex flex-col mt-10 p-5 rounded-2xl">
       <div className="flex flex-wrap justify-around">
         <div>
           <fieldset className="fieldset w-55">
@@ -36,7 +36,7 @@ export const SearchFilter = ({ onSearch, onReset, selectedCategory }) => {
             </legend>
             <select
               value={filters.category}
-              className="select select-sm rounded-box text-slate-600 text-sm"
+              className="select select-sm rounded-box text-slate-600 text-sm capitalize"
               onChange={(e) => {
                 setFilters({ ...filters, category: e.target.value });
               }}
@@ -64,7 +64,7 @@ export const SearchFilter = ({ onSearch, onReset, selectedCategory }) => {
             </legend>
             <select
               value={filters.woodType}
-              className="select select-sm rounded-box text-slate-600 text-sm"
+              className="select select-sm rounded-box text-slate-600 text-sm capitalize"
               onChange={(e) => {
                 setFilters({ ...filters, woodType: e.target.value });
               }}
@@ -85,7 +85,7 @@ export const SearchFilter = ({ onSearch, onReset, selectedCategory }) => {
             <legend className="fieldset-legend text-slate-700 ">Sort By</legend>
             <select
               value={filters.sortBy}
-              className="select select-sm rounded-box text-slate-600 text-sm"
+              className="select select-sm rounded-box text-slate-600 text-sm capitalize"
               onChange={(e) => {
                 setFilters({ ...filters, sortBy: e.target.value });
               }}

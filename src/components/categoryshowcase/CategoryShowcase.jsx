@@ -14,9 +14,9 @@ export const CategoryShowcase = () => {
   console.log(data);
 
   return (
-    <div className="max-w-5xl mt-10 m-auto mb-5">
+    <div className="max-w-6xl mt-10 m-auto mb-5">
       <div className=" text-[#394E6A] text-3xl tracking-widest ">
-        Browse by Category
+        Curate Your Space
       </div>
       <div
         className={
@@ -27,11 +27,31 @@ export const CategoryShowcase = () => {
       ></div>
       <Swiper
         modules={[Navigation, Pagination, FreeMode]}
-        spaceBetween={20}
         freeMode={true}
-        pagination={{ clickable: true }}
-        slidesPerView={4}
+        pagination={{ clickable: true, dynamicBullets: true }}
         grabCursor={false}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        breakpoints={{
+          320: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          640: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+        }}
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
         className=""
@@ -39,14 +59,14 @@ export const CategoryShowcase = () => {
         {data?.map((item) => (
           <SwiperSlide key={item.id}>
             <Link to={`/products?category=${item.category}`}>
-              <div className="rounded-xl flex items-end justify-start overflow-hidden">
-                <div className="relative w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+              <div className="rounded-xl flex items-end justify-center overflow-hidden">
+                <div className="relative w-full h-full object-cover hover:scale-105 transition-transform duration-300 shadow-2xl">
                   <img
                     src={item.image_path}
                     className="w-full h-full object-fill rounded-xl"
                   ></img>
                 </div>
-                <div className="absolute text-2xl backdrop-blur-sm px-6 py-2 rounded-xl text-slate-900 bg-white/10 mb-3 ml-3">
+                <div className="absolute text-xl font-semibold capitalize px-3 py-2 rounded-xl text-[#021431] bg-white/70 mb-6 ml-6">
                   {item.category}
                 </div>
               </div>
