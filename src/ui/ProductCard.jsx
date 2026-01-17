@@ -1,6 +1,6 @@
 export const ProductCard = ({ product }) => {
   return (
-    <div className="group w-80 rounded-xl h-80 m-auto hover:bg-gray-200 shadow-xl  hover:shadow-2xl hover:cursor-pointer">
+    <div className="group w-80 rounded-xl h-80 m-auto hover:bg-gray-50 shadow-xl  hover:shadow-2xl hover:cursor-pointer">
       <div className="h-full w-full px-5 pt-2">
         <div className="flex">
           <div className="relative h-55 w-full overflow-hidden rounded-xl">
