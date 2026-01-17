@@ -18,6 +18,11 @@ export const CategoryShowcase = () => {
       <div className=" text-[#394E6A] text-3xl tracking-widest ">
         Curate Your Space
       </div>
+      <p className="text-slate-900 mt-2 ">
+        Find comfort for every corner. From deep-seated sofas to artisan dining
+        tables, explore our curated collections designed to make your home the
+        ultimate sanctuary.
+      </p>
       <div
         className={
           isLoading
