@@ -12,24 +12,22 @@ export const FeaturedProducts = () => {
   if (isError) return <div>Error: {error.message}</div>;
   //if (isLoading) return <div>Loading...</div>;
   return (
-    <div className="max-w-6xl m-auto">
-      <div className="flex justify-between mt-20 items-end">
-        <div className=" text-[#394E6A] text-3xl tracking-widest">
-          Featured Collection
+    <div className="max-w-6xl m-auto mt-12">
+      <div className="max-w-10/12 flex flex-col m-auto text-center">
+        <div className=" text-[#394E6A] text-3xl tracking-widest font-[Playfair_Display] font-medium">
+          Living Essentials
         </div>
-        <Link
-          to="/products"
-          className="text-[#141b24] font-semibold text-sm hover:-translate-x-1 transition-transform duration-300 hover:cursor-pointer hover:link"
-        >
-          View All
-        </Link>
+        <p className="text-[#131313cc] mt-2 font-medium text-[18px]">
+          Explore our most-loved pieces, handpicked for their exceptional
+          comfort and timeless design.
+        </p>
       </div>
 
       <div
         className={
           isLoading
             ? "loading loading-ring loading-xl m-auto flex h-100"
-            : "border-b border-slate-300 mt-5 mb-10"
+            : "border-b border-slate-300 mt-5 mb-10 opacity-50"
         }
       ></div>
       <div className="w-full h-full grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">

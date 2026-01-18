@@ -15,11 +15,11 @@ export const ProductCard = ({ product }) => {
           </div>
         </div>
 
-        <div className="md:text-base text-sm text-[#394E6A] font-semibold mt-1">
+        <div className="md:text-base text-sm text-[#394E6A] font-semibold mt-1 ml-2">
           {product.name}
         </div>
 
-        <div className="flex pl-2 justify-between mt-1">
+        <div className="flex ml-2 justify-between mt-1">
           <div className="flex flex-row gap-2">
             <div className="text-indigo-900 pt-2 text-base font-semibold line-through decoration-red-800 decoration-1">
               ${product.price}

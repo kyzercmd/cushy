@@ -7,15 +7,17 @@ import hero4 from "../../assets/hero4.png";
 
 export const Hero = () => {
   return (
-    <div className="md:max-w-6xl m-auto flex justify-between bg-white py-10 pl-10 mt-5 rounded-4xl">
+    <div className="md:max-w-5xl m-auto flex justify-between bg-white py-10 mt-5 rounded-4xl">
       <div className="flex-col flex gap-10 lg:max-w-1/2 mt-5 lg:pr-20 ml-5">
-        <div className="text-6xl font-bold text-[#394E6A]">
-          We are changing the way people shop
+        <div className="text-6xl font-bold text-[#394E6A] max-w-10/12 font-[Playfair_Display]">
+          The New Standard of{" "}
+          <span className="text-blue-500 tracking-wide">Comfort</span>
         </div>
-        <p className="text-[#394E6A] text-lg">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident
-          amet ipsam beatae nihil id dolorum necessitatibus aperiam error totam,
-          voluptate.
+        <p className="text-[#394E6A] text-lg font-medium">
+          We believe shopping for your home should be as relaxing as living in
+          it. We are changing the way you curate your space by delivering
+          showroom-quality pieces directly to your door-faster, easier, and
+          cozier than ever before.
         </p>
         <div className="">
           <Link

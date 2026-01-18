@@ -15,14 +15,17 @@ export const CategoryShowcase = () => {
 
   return (
     <div className="max-w-6xl mt-10 m-auto mb-5">
-      <div className=" text-[#394E6A] text-3xl tracking-widest ">
-        Curate Your Space
+      <div className="max-w-10/12 flex flex-col m-auto text-center">
+        <div className=" text-[#394E6A] text-3xl tracking-widest font-[Playfair_Display] font-medium">
+          Curate Your Space
+        </div>
+        <p className="text-[#131313cc] mt-2 font-medium text-[18px]">
+          Find comfort for every corner. From deep-seated sofas to artisan
+          dining tables, explore our curated collections designed to make your
+          home the ultimate sanctuary.
+        </p>
       </div>
-      <p className="text-slate-900 mt-2 ">
-        Find comfort for every corner. From deep-seated sofas to artisan dining
-        tables, explore our curated collections designed to make your home the
-        ultimate sanctuary.
-      </p>
+
       <div
         className={
           isLoading
@@ -59,7 +62,7 @@ export const CategoryShowcase = () => {
         }}
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
-        className=""
+        className="max-w-10/12 md:max-w-6xl"
       >
         {data?.map((item) => (
           <SwiperSlide key={item.id}>
@@ -71,7 +74,7 @@ export const CategoryShowcase = () => {
                     className="w-full h-full object-fill rounded-xl"
                   ></img>
                 </div>
-                <div className="absolute text-xl font-semibold capitalize px-3 py-2 rounded-xl text-[#021431] bg-white/70 mb-6 ml-6">
+                <div className="absolute text-xl font-semibold capitalize px-3 py-2 rounded-xl text-[#021431] bg-white/70 mb-3">
                   {item.category}
                 </div>
               </div>
