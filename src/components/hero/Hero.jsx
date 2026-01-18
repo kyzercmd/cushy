@@ -9,7 +9,7 @@ export const Hero = () => {
   return (
     <div className="md:max-w-5xl m-auto flex justify-between bg-white py-10 mt-5 rounded-4xl">
       <div className="flex-col flex gap-10 lg:max-w-1/2 mt-5 lg:pr-20 ml-5">
-        <div className="text-6xl font-bold text-[#394E6A] max-w-10/12 font-[Playfair_Display]">
+        <div className="text-6xl font-bold text-[#394E6A] max-w-10/12 font-[Rubik]">
           The New Standard of{" "}
           <span className="text-blue-500 tracking-wide">Comfort</span>
         </div>

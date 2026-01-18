@@ -1,5 +1,5 @@
-import Logo from "../../assets/logoblue-removebg.png";
 import { Link, NavLink } from "react-router-dom";
+import { Armchair } from "lucide-react";
 
 export const Header = () => {
   return (
@@ -78,12 +78,16 @@ export const Header = () => {
               </li>
             </ul>
           </div>
-          <Link to="/" className="text-xl">
-            <img
-              onClick=""
-              className="hover:cursor-pointer h-10 w-20"
-              src={Logo}
-            ></img>
+          <Link to="/">
+            <div className="items-center gap-2 select-none inline-flex">
+              <div className="flex items-center justify-center w-10 h-10 bg-slate-700 text-blue-100 rounded-2xl shadow-sm">
+                <Armchair size={26} strokeWidth={2} />
+              </div>
+
+              <h1 className="text-2xl font-bold text-blue-600 tracking-tight">
+                Ever<span className="text-slate-700">Soft.</span>
+              </h1>
+            </div>
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">

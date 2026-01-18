@@ -14,7 +14,7 @@ export const FeaturedProducts = () => {
   return (
     <div className="max-w-6xl m-auto mt-12">
       <div className="max-w-10/12 flex flex-col m-auto text-center">
-        <div className=" text-[#394E6A] text-3xl tracking-widest font-[Playfair_Display] font-medium">
+        <div className=" text-[#394E6A] text-3xl tracking-widest font-[Urbanist] font-medium">
           Living Essentials
         </div>
         <p className="text-[#131313cc] mt-2 font-medium text-[18px]">
@@ -27,7 +27,7 @@ export const FeaturedProducts = () => {
         className={
           isLoading
             ? "loading loading-ring loading-xl m-auto flex h-100"
-            : "border-b border-slate-300 mt-5 mb-10 opacity-50"
+            : "border-b border-dashed border-slate-300 mt-5 mb-10"
         }
       ></div>
       <div className="w-full h-full grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
