@@ -16,10 +16,10 @@ export const CategoryShowcase = () => {
   return (
     <div className="max-w-6xl mt-10 m-auto mb-5">
       <div className="max-w-10/12 flex flex-col m-auto text-center">
-        <div className=" text-[#394E6A] text-3xl tracking-widest font-[Urbanist] font-medium">
+        <div className=" text-[#394E6A] text-3xl tracking-widest font-[Playfair_Display] font-medium">
           Curate Your Space
         </div>
-        <p className="text-[#131313cc] mt-2 font-medium text-[18px]">
+        <p className="text-[#131313cc] mt-2 text-[18px]">
           Find comfort for every corner. From deep-seated sofas to artisan
           dining tables, explore our curated collections designed to make your
           home the ultimate sanctuary.

@@ -14,10 +14,10 @@ export const FeaturedProducts = () => {
   return (
     <div className="max-w-6xl m-auto mt-12">
       <div className="max-w-10/12 flex flex-col m-auto text-center">
-        <div className=" text-[#394E6A] text-3xl tracking-widest font-[Urbanist] font-medium">
+        <div className=" text-[#394E6A] text-3xl tracking-widest font-[Playfair_Display] font-medium">
           Living Essentials
         </div>
-        <p className="text-[#131313cc] mt-2 font-medium text-[18px]">
+        <p className="text-[#131313cc] mt-2 leading-relaxed antialiased text-[18px]">
           Explore our most-loved pieces, handpicked for their exceptional
           comfort and timeless design.
         </p>
@@ -34,6 +34,16 @@ export const FeaturedProducts = () => {
         {featuredItems?.map((item) => (
           <ProductCard key={item.id} product={item} />
         ))}
+      </div>
+      <div className="flex mt-5">
+        <div className=" m-auto flex p-1 rounded-xl border-slate-600 border-2">
+          <Link
+            to="/products"
+            className="btn m-auto bg-blue-500 hover:bg-blue-400 text-slate-200 font-medium rounded-xl px-20 py-5 text-base"
+          >
+            View All
+          </Link>
+        </div>
       </div>
     </div>
   );
