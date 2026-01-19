@@ -22,7 +22,7 @@ export const Hero = () => {
         <div className="">
           <Link
             to="/products"
-            className="btn btn-ghost py-6 px-8 font-semibold bg-blue-500 hover:bg-blue-400 text-slate-200 text-sm hover:cursor-pointer rounded-box shadow-2xl"
+            className="btn btn-ghost py-6 px-8 font-semibold bg-blue-600 hover:bg-blue-500 text-slate-200 text-sm hover:cursor-pointer rounded-box shadow-2xl"
           >
             OUR PRODUCTS
           </Link>

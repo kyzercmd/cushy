@@ -4,14 +4,16 @@ import { FeaturedProducts } from "../components/featuredproducts/FeaturedProduct
 import { CategoryShowcase } from "../components/categoryshowcase/CategoryShowcase";
 import { ValueProposition } from "../components/valueproposition/ValueProposition";
 import { Faq } from "../components/Faq/Faq";
+import { LifestyleFeature } from "../components/lifestylefeature/LifestyleFeature";
 
 export const Home = () => {
   return (
     <>
       <Hero />
-      <ValueProposition />
       <CategoryShowcase />
+      <ValueProposition />
       <FeaturedProducts />
+      <LifestyleFeature />
       <Faq />
     </>
   );

@@ -15,10 +15,10 @@ export const FeaturedProducts = () => {
   return (
     <div className="lg:max-w-6xl max-w-11/12 mx-auto my-30">
       <div className="flex flex-col m-auto text-center">
-        <div className=" text-[#021431] text-3xl tracking-widest font-serif font-medium">
+        <div className=" text-[#021431] text-3xl tracking-widest font-medium">
           Community Picks
         </div>
-        <p className="text-[#131313cc] font-[Urbanist] mt-2 leading-relaxed antialiased text-[18px]">
+        <p className="text-[#131313cc] mt-2 leading-relaxed antialiased text-[18px]">
           Explore our most-loved pieces, handpicked for their exceptional
           comfort and timeless design.
         </p>

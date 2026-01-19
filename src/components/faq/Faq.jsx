@@ -5,18 +5,18 @@ import { SquareArrowOutUpRight } from "lucide-react";
 export const Faq = () => {
   return (
     <div className="lg:max-w-6xl max-w-11/12 m-auto my-30">
-      <div className=" flex flex-col mx-auto text-center mb-5">
-        <div className=" text-[#021431] text-3xl tracking-widest font-serif font-medium">
+      <div className=" flex flex-col mx-auto text-center mb-5 ">
+        <div className=" text-[#021431] text-3xl tracking-widest  font-medium">
           Frequenty Asked Questions (FAQs)
         </div>
-        <p className="text-[#131313cc] mt-2 leading-relaxed antialiased font-[Urbanist] text-[18px]">
+        <p className="text-[#131313cc] mt-2 leading-relaxed antialiased text-[18px]">
           Got questions? We've got answers. Explore our quick guide to shipping,
           assembly, and returns to see how we're making furniture shopping
           easier than ever.
         </p>
       </div>
       <div>
-        <div className="collapse collapse-arrow bg-base-100 border border-base-300 mb-1 shadow-sm p-1">
+        <div className="collapse collapse-arrow bg-base-100 border border-base-300 mb-1 shadow-sm p-1 rounded-2xl">
           <input type="radio" name="my-accordion-2" defaultChecked />
           <div className="collapse-title font-bold font-[Urbanist] text-[#021431]">
             How long does delivery take?
@@ -26,7 +26,7 @@ export const Faq = () => {
             shipping and professional white-glove delivery on every order.
           </div>
         </div>
-        <div className="collapse collapse-arrow bg-base-100 border border-base-300 mb-1 shadow-sm p-1">
+        <div className="rounded-2xl collapse collapse-arrow bg-base-100 border border-base-300 mb-1 shadow-sm p-1">
           <input type="radio" name="my-accordion-2" />
           <div className="collapse-title font-bold font-[Urbanist] text-[#021431]">
             What is the 365-day home trial?
@@ -37,7 +37,7 @@ export const Faq = () => {
             a full refund.
           </div>
         </div>
-        <div className="collapse collapse-arrow bg-base-100 border border-base-300 mb-1 shadow-sm p-1">
+        <div className="rounded-2xl collapse collapse-arrow bg-base-100 border border-base-300 mb-1 shadow-sm p-1">
           <input type="radio" name="my-accordion-2" />
           <div className="collapse-title font-bold font-[Urbanist] text-[#021431]">
             Are your materials sustainable?
@@ -48,17 +48,17 @@ export const Faq = () => {
             earth.
           </div>
         </div>
-        <div className="collapse collapse-arrow bg-base-100 border border-base-300 mb-1 shadow-sm p-1">
+        <div className="rounded-2xl collapse collapse-arrow bg-base-100 border border-base-300 mb-1 shadow-sm p-1">
           <input type="radio" name="my-accordion-2" />
           <div className="collapse-title font-bold font-[Urbanist] text-[#021431]">
             Do I have to assemble the furniture myself?
           </div>
-          <div className="collapse-content text-sm leading-relaxed font-[Urbanist] text-[#131313cc]">
+          <div className=" collapse-content text-sm leading-relaxed font-[Urbanist] text-[#131313cc]">
             No. Our delivery team handles all the heavy lifting and assembly for
             you, ensuring your new piece is perfectly placed and ready to use.
           </div>
         </div>
-        <div className="collapse collapse-arrow bg-base-100 border border-base-300 mb-1 shadow-sm p-1">
+        <div className="rounded-2xl collapse collapse-arrow bg-base-100 border border-base-300 mb-1 shadow-sm p-1">
           <input type="radio" name="my-accordion-2" />
           <div className="collapse-title font-bold font-[Urbanist] text-[#021431]">
             What kind of warranty do you provide?
