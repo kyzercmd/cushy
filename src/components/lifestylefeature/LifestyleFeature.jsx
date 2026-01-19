@@ -1,17 +1,18 @@
 import React from "react";
-import LifeStyle from "../../assets/featurehero2.jpg";
+import LifeStyle from "../../assets/featurehero3.jpg";
 import { Link } from "react-router-dom";
 
 export const LifestyleFeature = () => {
   return (
     <div className="lg:max-w-6xl max-w-11/12 m-auto bg-white rounded-4xl overflow-hidden shadow-sm border border-base-300 my-30">
       <div className="flex flex-col md:flex-row overflow-hidden min-h-150">
-        <div className="flex w-full md:w-1/2 h-120 md:h-auto">
+        <div className="relative flex w-full md:w-1/2 h-120 md:h-auto">
           <img
             src={LifeStyle}
             alt="LifeStyle"
             className="object-cover h-full w-full"
           ></img>
+          <div className="absolute inset-0 bg-slate-900/10"></div>
         </div>
 
         <div className="w-full md:w-1/2 flex items-center p-10">

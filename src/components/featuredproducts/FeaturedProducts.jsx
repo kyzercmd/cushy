@@ -37,7 +37,7 @@ export const FeaturedProducts = () => {
         ))}
       </div>
       <div className="flex mt-5">
-        <div className=" m-auto flex p-1 rounded-xl border-slate-600 border-2">
+        <div className=" m-auto flex p-1 rounded-xl border-gray-300 border-2">
           <Link
             to="/products"
             className="btn m-auto bg-blue-600 hover:bg-blue-500 text-slate-200 font-bold rounded-box px-10 py-5 text-base"

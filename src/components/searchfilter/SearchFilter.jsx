@@ -11,7 +11,7 @@ export const SearchFilter = ({ onSearch, onReset, selectedCategory }) => {
   });
 
   return (
-    <div className="max-w-6xl bg-blue-50 m-auto flex flex-col mt-10 p-5 rounded-2xl">
+    <div className="max-w-6xl bg-white border border-base-300 shadow-sm m-auto flex flex-col mt-5 p-5 rounded-2xl">
       <div className="flex flex-wrap justify-around">
         <div>
           <fieldset className="fieldset w-55">
@@ -127,7 +127,7 @@ export const SearchFilter = ({ onSearch, onReset, selectedCategory }) => {
             </label>
           </fieldset>
         </div>
-        <div className="">
+        <div className="md:py-0 py-5">
           <button
             className="btn rounded-box w-55 btn-sm bg-blue-500 text-slate-200"
             onClick={() => {

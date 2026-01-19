@@ -4,9 +4,11 @@ import { useSearchParams } from "react-router-dom";
 import { useProductFetch } from "../hooks/useProductFetch";
 import { ProductCard } from "../ui/ProductCard";
 import { SearchFilter } from "../components/searchfilter/SearchFilter";
+import { CategoryInfo } from "../components/categoryinfo/CategoryInfo";
 
 export const AllProducts = () => {
   //const [ view, setview ] = useState(1);
+
   const [SearchParams] = useSearchParams();
   const selectedCategory = SearchParams.get("category");
 
@@ -45,7 +47,14 @@ export const AllProducts = () => {
   const currentPage = activeFilters.page;
 
   return (
-    <div>
+    <div className="mb-30">
+      <CategoryInfo
+        data={{
+          title: "All Collection",
+          description:
+            "Explore our full range of artisan-crafted furniture designed for durability and comfort.",
+        }}
+      />
       <SearchFilter
         onSearch={handleSearch}
         onReset={handleReset}
