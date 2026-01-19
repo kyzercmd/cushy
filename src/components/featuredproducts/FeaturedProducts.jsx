@@ -1,6 +1,7 @@
 import { useProductFetch } from "../../hooks/useProductFetch";
 import { ProductCard } from "../../ui/ProductCard";
 import { Link } from "react-router-dom";
+import { SquareArrowOutUpRight } from "lucide-react";
 
 export const FeaturedProducts = () => {
   const {
@@ -12,12 +13,12 @@ export const FeaturedProducts = () => {
   if (isError) return <div>Error: {error.message}</div>;
   //if (isLoading) return <div>Loading...</div>;
   return (
-    <div className="max-w-6xl m-auto mt-12">
-      <div className="max-w-10/12 flex flex-col m-auto text-center">
-        <div className=" text-[#394E6A] text-3xl tracking-widest font-[Playfair_Display] font-medium">
-          Living Essentials
+    <div className="lg:max-w-6xl max-w-11/12 mx-auto my-30">
+      <div className="flex flex-col m-auto text-center">
+        <div className=" text-[#021431] text-3xl tracking-widest font-serif font-medium">
+          Community Picks
         </div>
-        <p className="text-[#131313cc] mt-2 leading-relaxed antialiased text-[18px]">
+        <p className="text-[#131313cc] font-[Urbanist] mt-2 leading-relaxed antialiased text-[18px]">
           Explore our most-loved pieces, handpicked for their exceptional
           comfort and timeless design.
         </p>
@@ -39,9 +40,10 @@ export const FeaturedProducts = () => {
         <div className=" m-auto flex p-1 rounded-xl border-slate-600 border-2">
           <Link
             to="/products"
-            className="btn m-auto bg-blue-500 hover:bg-blue-400 text-slate-200 font-medium rounded-xl px-20 py-5 text-base"
+            className="btn m-auto bg-blue-600 hover:bg-blue-500 text-slate-200 font-bold rounded-box px-10 py-5 text-base"
           >
             View All
+            <SquareArrowOutUpRight size={17} strokeWidth={3} />
           </Link>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, FreeMode } from "swiper/modules";
+import { Navigation, Pagination, FreeMode, Autoplay } from "swiper/modules";
 import { useCategoryFetch } from "../../hooks/useCategoryFetch";
 import { Link } from "react-router-dom";
 import "swiper/css";
@@ -14,12 +14,12 @@ export const CategoryShowcase = () => {
   console.log(data);
 
   return (
-    <div className="max-w-6xl mt-10 m-auto mb-5">
+    <div className="lg:max-w-6xl max-w-11/12 mx-auto my-30">
       <div className="max-w-10/12 flex flex-col m-auto text-center">
-        <div className=" text-[#394E6A] text-3xl tracking-widest font-[Playfair_Display] font-medium">
+        <div className=" text-[#021431] text-3xl tracking-widest font-serif font-medium">
           Curate Your Space
         </div>
-        <p className="text-[#131313cc] mt-2 text-[18px]">
+        <p className="text-[#131313cc] mt-2 text-[18px] font-[Urbanist]">
           Find comfort for every corner. From deep-seated sofas to artisan
           dining tables, explore our curated collections designed to make your
           home the ultimate sanctuary.
@@ -34,8 +34,8 @@ export const CategoryShowcase = () => {
         }
       ></div>
       <Swiper
-        modules={[Navigation, Pagination, FreeMode]}
-        freeMode={true}
+        modules={[Navigation, Pagination, FreeMode, Autoplay]}
+        freeMode={false}
         pagination={{ clickable: true, dynamicBullets: true }}
         grabCursor={false}
         autoplay={{
@@ -62,19 +62,19 @@ export const CategoryShowcase = () => {
         }}
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
-        className="max-w-10/12 md:max-w-6xl"
+        className="max-w-11/12 md:max-w-6xl "
       >
         {data?.map((item) => (
           <SwiperSlide key={item.id}>
             <Link to={`/products?category=${item.category}`}>
-              <div className="rounded-xl flex items-end justify-center overflow-hidden">
-                <div className="relative w-full h-full object-cover hover:scale-105 transition-transform duration-300 shadow-2xl">
+              <div className="border border-slate-700 rounded-xl flex items-end justify-center overflow-hidden">
+                <div className="relative w-full h-full object-cover hover:scale-103 transition-transform duration-300 overflow-hidden">
                   <img
                     src={item.image_path}
-                    className="w-full h-full object-fill rounded-xl"
+                    className="w-full h-80 object-cover"
                   ></img>
                 </div>
-                <div className="absolute text-xl font-semibold capitalize px-3 py-2 rounded-xl text-[#021431] bg-white/70 mb-3">
+                <div className="absolute text-xl font-semibold capitalize px-3 py-2 rounded-xl text-[#021431] bg-white/70 mb-3 z-50">
                   {item.category}
                 </div>
               </div>

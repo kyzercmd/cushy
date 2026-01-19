@@ -1,12 +1,12 @@
 export const ProductCard = ({ product }) => {
   return (
-    <div className="group w-80 rounded-xl h-80 m-auto hover:bg-gray-50 shadow-xl  hover:shadow-2xl hover:cursor-pointer">
+    <div className="group bg-white w-80 rounded-xl h-80 m-auto hover:bg-gray-50 shadow-sm  hover:shadow-2xl hover:cursor-pointer transition-shadow duration-500">
       <div className="h-full w-full px-5 pt-2">
         <div className="flex">
           <div className="relative h-55 w-full overflow-hidden rounded-xl">
             <img
               src={product.image_path}
-              className="w-full h-55 object-cover group-hover:scale-105 transition-transform duration-300"
+              className="w-full h-55 object-cover group-hover:scale-103 transition-transform duration-300"
               alt={product.name}
             />
           </div>
@@ -29,7 +29,7 @@ export const ProductCard = ({ product }) => {
             </div>
           </div>
           <div className="flex flex-row gap-2 mt-1">
-            <div className="btn btn-sm btn-outline font-semibold rounded-box text-sm  hover:bg-blue-300 hover:cursor-pointer py-4 flex items-center hover:shadow-2xl transition-colors duration-200 border-blue-300">
+            <div className="btn btn-sm btn-outline font-semibold rounded-box text-sm  hover:bg-[#021431] hover:cursor-pointer py-4 flex items-center hover:shadow-2xl  border-[#021431] hover:text-slate-200">
               View Details
             </div>
           </div>

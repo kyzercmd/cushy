@@ -7,8 +7,8 @@ import hero4 from "../../assets/hero4.png";
 
 export const Hero = () => {
   return (
-    <div className="md:max-w-5xl m-auto flex justify-between bg-white py-10 mt-5 rounded-4xl">
-      <div className="flex-col flex gap-10 lg:max-w-1/2 mt-5 lg:pr-20 ml-5">
+    <div className="lg:max-w-6xl max-w-11/12 mx-auto flex justify-between shadow-sm bg-white p-10 md:15 mt-5 mb-5 rounded-4xl border border-base-300">
+      <div className="flex-col flex gap-10 lg:max-w-1/2 mt-5 lg:pr-20">
         <div className="text-6xl tracking-tighter font-bold text-[#394E6A] max-w-10/12">
           The New Standard of{" "}
           <span className="text-blue-500 tracking-normal">Comfort</span>

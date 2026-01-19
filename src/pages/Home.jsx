@@ -3,6 +3,7 @@ import { Hero } from "../components/hero/Hero";
 import { FeaturedProducts } from "../components/featuredproducts/FeaturedProducts";
 import { CategoryShowcase } from "../components/categoryshowcase/CategoryShowcase";
 import { ValueProposition } from "../components/valueproposition/ValueProposition";
+import { Faq } from "../components/Faq/Faq";
 
 export const Home = () => {
   return (
@@ -11,6 +12,7 @@ export const Home = () => {
       <ValueProposition />
       <CategoryShowcase />
       <FeaturedProducts />
+      <Faq />
     </>
   );
 };

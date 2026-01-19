@@ -3,8 +3,8 @@ import { Armchair } from "lucide-react";
 
 export const Header = () => {
   return (
-    <div className=" shadow-xl navbar bg-blue-50 py-1">
-      <div className="w-full md:max-w-6xl m-auto flex justify-between">
+    <div className="border-b border-base-300 navbar bg-white shadow-sm max-w-8xl mx-auto rounded-2xl py-1">
+      <div className="w-full md:max-w-6xl mx-auto flex justify-between">
         <div className="navbar-start">
           <div className="dropdown">
             <div
