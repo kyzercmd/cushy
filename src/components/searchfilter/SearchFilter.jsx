@@ -139,7 +139,7 @@ export const SearchFilter = ({ onSearch, onReset, selectedCategory }) => {
         </div>
         <div>
           <button
-            className="btn btn-ghost rounded-box w-55 btn-sm text-xs bg-[#c149ad] text-slate-200"
+            className="btn btn-ghost rounded-box w-55 btn-sm text-xs bg-[#7169b6] text-slate-200"
             onClick={() => {
               setFilters({
                 search: "",

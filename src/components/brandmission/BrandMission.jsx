@@ -1,5 +1,5 @@
 import React from "react";
-import Story from "../../assets/allproducts3.jpg";
+import Story from "../../assets/our-story.jpg";
 
 export const BrandMission = () => {
   return (
@@ -21,7 +21,7 @@ export const BrandMission = () => {
             <img
               src={Story}
               alt="Our story"
-              className="object-cover h-100 w-full rounded-4xl"
+              className="object-cover h-100 w-full rounded-4xl -scale-x-100"
             ></img>
           </div>
 

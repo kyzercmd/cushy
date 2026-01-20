@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Typewriter from "typewriter-effect";
 
 import hero1 from "../../assets/hero1.png";
 import hero2 from "../../assets/hero2.png";
@@ -11,7 +12,15 @@ export const Hero = () => {
       <div className="flex-col flex gap-10 lg:max-w-1/2 mt-5 lg:pr-20">
         <div className="text-6xl tracking-tighter font-bold text-[#394E6A] max-w-10/12">
           The New Standard of{" "}
-          <span className="text-blue-500 tracking-normal">Comfort</span>
+          <span className="text-blue-500 tracking-normal">
+            <Typewriter
+              options={{
+                strings: ["Comfort", "Elegance", "Presence"],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+          </span>
         </div>
         <p className="text-[#394E6A] text-lg leading-relaxed antialiased">
           We believe shopping for your home should be as relaxing as living in
@@ -31,16 +40,32 @@ export const Hero = () => {
       <div className=" hidden lg:block">
         <div className="carousel carousel-center bg-[#021431] rounded-2xl max-w-lg space-x-4 p-4">
           <div className="carousel-item">
-            <img src={hero1} className="rounded-2xl w-80 h-105 object-cover" />
+            <img
+              src={hero1}
+              alt="comfort"
+              className="rounded-2xl w-80 h-105 object-cover"
+            />
           </div>
           <div className="carousel-item">
-            <img src={hero2} className="rounded-2xl w-80 h-105 object-cover" />
+            <img
+              src={hero2}
+              alt="elegance"
+              className="rounded-2xl w-80 h-105 object-cover"
+            />
           </div>
           <div className="carousel-item">
-            <img src={hero3} className="rounded-2xl w-80 h-105 object-cover" />
+            <img
+              src={hero3}
+              alt="presence"
+              className="rounded-2xl w-80 h-105 object-cover"
+            />
           </div>
           <div className="carousel-item">
-            <img src={hero4} className="rounded-2xl w-80 h-105 object-cover" />
+            <img
+              src={hero4}
+              alt="longevity"
+              className="rounded-2xl w-80 h-105 object-cover"
+            />
           </div>
         </div>
       </div>

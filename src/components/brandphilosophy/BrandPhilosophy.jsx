@@ -1,16 +1,16 @@
 import React from "react";
-import fireplace from "../../assets/sleep.svg";
+import sleep from "../../assets/sleep.svg";
 import timeflies from "../../assets/timeflies.svg";
 import environment from "../../assets/environment.svg";
 
 export const BrandPhilosophy = () => {
   return (
-    <div>
+    <div className="mb-30">
       <div className="lg:max-w-6xl max-w-11/12 m-auto px-5 mt-5 rounded-4xl bg-white border border-base-300 shadow-sm">
         <div className="flex flex-col md:flex-row justify-between">
           <img
             src={timeflies}
-            alt="fireplace"
+            alt="Built to last"
             className="h-60 w-60 object-cover mr-2"
           ></img>
           <div className=" flex-col flex justify-center">
@@ -29,8 +29,8 @@ export const BrandPhilosophy = () => {
       <div className="lg:max-w-6xl max-w-11/12 m-auto flex flex-col px-5 mt-2 rounded-4xl bg-white border border-base-300 shadow-sm">
         <div className="flex flex-col md:flex-row justify-between">
           <img
-            src={fireplace}
-            alt="fireplace"
+            src={sleep}
+            alt="Comfort"
             className="h-60 w-60 object-cover mr-2"
           ></img>
           <div className=" flex-col flex justify-center ">
@@ -50,7 +50,7 @@ export const BrandPhilosophy = () => {
         <div className="flex flex-col md:flex-row justify-between">
           <img
             src={environment}
-            alt="fireplace"
+            alt="Kinder to earth"
             className="h-60 w-60 object-cover  mr-2"
           ></img>
           <div className=" flex-col flex  justify-center">
