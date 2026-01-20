@@ -10,7 +10,7 @@ export const CategoryInfo = ({ data }) => {
         <div className="absolute inset-0 bg-slate-900/50"></div>
       </div>
 
-      <div className="z-10">
+      <div className="z-2">
         <div className=" text-white text-3xl tracking-widest font-serif font-medium antialiased">
           {data.title}
         </div>

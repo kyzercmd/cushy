@@ -5,7 +5,7 @@ export const BrandMission = () => {
   return (
     <div className="lg:max-w-6xl max-w-11/12 m-auto flex flex-col md:p-20 p-5 mt-5 mb-10 rounded-4xl bg-white border border-base-300 shadow-sm">
       <div className="border-b-2  border-gray-300">
-        <h1 className="text-[#021431] md:text-4xl text-2xl tracking-wide font-semibold">
+        <h1 className="text-[#021431] md:text-4xl text-2xl tracking-wide font-semibold font-[Playfair_Display]">
           Furniture for the<br></br> Forever Home
         </h1>
         <p className="text-[#131313cc] text-sm mt-2 leading-relaxed antialiased md:text-base max-w-2/3 mb-10">
@@ -20,14 +20,14 @@ export const BrandMission = () => {
           <div className="relative flex w-full md:w-1/2 md:h-auto rounded-4xl overflow-hidden">
             <img
               src={Story}
-              alt="LifeStyle"
+              alt="Our story"
               className="object-cover h-100 w-full rounded-4xl"
             ></img>
           </div>
 
           <div className="w-full md:w-1/2 flex items-center md:p-10">
             <div>
-              <h2 className="md:text-2xl text-xl font-semibold text-slate-900 mb-6 leading-tight">
+              <h2 className="md:text-2xl text-xl font-semibold text-slate-900 mb-6 leading-tight font-[Playfair-Display]">
                 Born from a Search for Better
               </h2>
               <p className="text-slate-600 text-base mb-8 leading-relaxed">

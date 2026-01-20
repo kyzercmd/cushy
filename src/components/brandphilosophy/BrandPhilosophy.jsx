@@ -6,8 +6,8 @@ import environment from "../../assets/environment.svg";
 export const BrandPhilosophy = () => {
   return (
     <div>
-      <div className="lg:max-w-6xl max-w-11/12 m-auto flex flex-col px-5 mt-5 rounded-4xl bg-white border border-base-300 shadow-sm">
-        <div className="flex justify-between">
+      <div className="lg:max-w-6xl max-w-11/12 m-auto px-5 mt-5 rounded-4xl bg-white border border-base-300 shadow-sm">
+        <div className="flex flex-col md:flex-row justify-between">
           <img
             src={timeflies}
             alt="fireplace"
@@ -27,7 +27,7 @@ export const BrandPhilosophy = () => {
         </div>
       </div>
       <div className="lg:max-w-6xl max-w-11/12 m-auto flex flex-col px-5 mt-2 rounded-4xl bg-white border border-base-300 shadow-sm">
-        <div className="flex justify-between">
+        <div className="flex flex-col md:flex-row justify-between">
           <img
             src={fireplace}
             alt="fireplace"
@@ -47,7 +47,7 @@ export const BrandPhilosophy = () => {
         </div>
       </div>
       <div className="lg:max-w-6xl max-w-11/12 m-auto flex flex-col px-5 mt-2 mb-10 rounded-4xl bg-white border border-base-300 shadow-sm">
-        <div className="flex justify-between">
+        <div className="flex flex-col md:flex-row justify-between">
           <img
             src={environment}
             alt="fireplace"
