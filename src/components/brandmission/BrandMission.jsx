@@ -20,7 +20,6 @@ export const BrandMission = () => {
           <div className="relative flex w-full md:w-1/2 md:h-auto rounded-4xl overflow-hidden">
             <img
               src={Story}
-              alt="Our story"
               className="object-cover h-100 w-full rounded-4xl -scale-x-100"
             ></img>
           </div>

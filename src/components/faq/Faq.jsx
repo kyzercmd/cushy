@@ -73,7 +73,7 @@ export const Faq = () => {
       <div className="flex mt-5">
         <Link
           to="/contact"
-          className="btn m-auto bg-blue-600 hover:bg-blue-500 text-slate-200 font-bold rounded-box px-5 py-5 text-sm"
+          className="btn m-auto bg-blue-500 hover:bg-blue-600 text-slate-200 font-bold rounded-box px-5 py-5 text-sm"
         >
           More FAQs
           <SquareArrowOutUpRight size={15} strokeWidth={3} />

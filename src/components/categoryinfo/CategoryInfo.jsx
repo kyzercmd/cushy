@@ -6,11 +6,7 @@ export const CategoryInfo = ({ data }) => {
   return (
     <div className="rounded-2xl relative min-h-50 max-w-11/12 lg:max-w-6xl flex flex-col justify-center overflow-hidden m-auto text-center mt-5">
       <div className="absolute inset-0 z-0">
-        <img
-          src={Background}
-          alt="Our collection"
-          className="w-full h-full object-cover"
-        ></img>
+        <img src={Background} className="w-full h-full object-cover"></img>
         <div className="absolute inset-0 bg-slate-900/50"></div>
       </div>
 

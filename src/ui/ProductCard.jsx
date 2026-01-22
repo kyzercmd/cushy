@@ -29,7 +29,7 @@ export const ProductCard = ({ product }) => {
             </div>
           </div>
           <div className="flex flex-row gap-2 mt-1">
-            <div className="btn btn-sm btn-outline font-semibold rounded-box text-sm  hover:bg-[#021431] hover:cursor-pointer py-4 flex items-center hover:shadow-2xl  border-[#021431] hover:text-slate-200">
+            <div className="btn btn-sm btn-outline font-semibold rounded-box text-sm  hover:bg-blue-600 hover:cursor-pointer py-4 flex items-center hover:shadow-2xl  border-[#021431] hover:text-slate-200">
               View Details
             </div>
           </div>

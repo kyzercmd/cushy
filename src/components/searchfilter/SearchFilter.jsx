@@ -36,7 +36,7 @@ export const SearchFilter = ({ onSearch, onReset, selectedCategory }) => {
             </legend>
             <select
               value={filters.category}
-              className="select select-sm rounded-box text-slate-600 text-sm capitalize"
+              className="select select-sm rounded-box text-slate-600 text-sm capitalize "
               onChange={(e) => {
                 setFilters({ ...filters, category: e.target.value });
               }}
@@ -116,7 +116,7 @@ export const SearchFilter = ({ onSearch, onReset, selectedCategory }) => {
             onChange={(e) => {
               setFilters({ ...filters, maxPrice: e.target.value });
             }}
-            className="range range-sm text-blue-500 [--range-bg:gray] [--range-thumb:white]"
+            className="range range-sm text-blue-500 hover:text-blue-600 [--range-bg:gray] [--range-thumb:white]"
           />
         </div>
         <div className="mt-2">
@@ -129,7 +129,7 @@ export const SearchFilter = ({ onSearch, onReset, selectedCategory }) => {
         </div>
         <div className="md:py-0 py-5">
           <button
-            className="btn rounded-box w-55 btn-sm bg-blue-500 text-slate-200"
+            className="btn rounded-box w-55 btn-sm bg-blue-500 hover:bg-blue-600 text-slate-200"
             onClick={() => {
               onSearch(filters);
             }}
@@ -139,7 +139,7 @@ export const SearchFilter = ({ onSearch, onReset, selectedCategory }) => {
         </div>
         <div>
           <button
-            className="btn btn-ghost rounded-box w-55 btn-sm text-xs bg-[#7169b6] text-slate-200"
+            className="btn btn-ghost rounded-box w-55 btn-sm text-xs bg-[#7169b6] hover:bg-[#584eaf] text-slate-200"
             onClick={() => {
               setFilters({
                 search: "",
