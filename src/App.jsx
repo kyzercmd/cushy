@@ -3,9 +3,8 @@ const queryClient = new QueryClient();
 import { Routes, Route } from "react-router-dom";
 
 import "./App.css";
-import { Header } from "../src/components/navbar/Header";
-import { Profilebar } from "../src/components/profilebar/Profilebar";
-import { Footer } from "../src/components/footer/Footer";
+import { MainLayout } from "./layouts/MainLayout";
+import { Login } from "./pages/Login";
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
 import { AllProducts } from "./pages/AllProducts";
@@ -16,18 +15,16 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <>
-        <Profilebar />
-        <Header />
-
         <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="products" element={<AllProducts />}></Route>
-          <Route path="about" element={<About />}></Route>
-          <Route path="contact" element={<Contact />}></Route>
-          <Route path="cart" element={<Cart />}></Route>
+          <Route path="login" element={<Login />}></Route>
+          <Route path="/" element={<MainLayout />}>
+            <Route index element={<Home />}></Route>
+            <Route path="products" element={<AllProducts />}></Route>
+            <Route path="about" element={<About />}></Route>
+            <Route path="contact" element={<Contact />}></Route>
+            <Route path="cart" element={<Cart />}></Route>
+          </Route>
         </Routes>
-
-        <Footer />
       </>
     </QueryClientProvider>
   );
