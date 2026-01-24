@@ -1,4 +1,4 @@
-import daisyui from "daisyui"; // Import the plugin
+import daisyui from "daisyui";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -6,7 +6,7 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [daisyui], // Use the imported variable here
+  plugins: [daisyui],
   daisyui: {
     themes: ["light"],
     darkTheme: "light",
