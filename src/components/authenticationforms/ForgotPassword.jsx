@@ -16,7 +16,7 @@ export const ForgotPassword = () => {
   } = useForm();
 
   return (
-    <div className="h-full lg:px-30 p-15 bg-white flex-col flex gap-10">
+    <div className="h-170 lg:px-30 p-15 bg-white flex-col flex gap-10">
       <div className="text-center">
         <h1 className="text-3xl font-semibold mb-5">Forgot Password</h1>
         <p>Enter Email associated with your account to receive a reset link</p>

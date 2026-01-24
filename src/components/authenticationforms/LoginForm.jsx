@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import { UserAuth } from "../../providers/AuthContext";
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 
 export const LoginForm = () => {
@@ -11,9 +12,15 @@ export const LoginForm = () => {
     setHidePassword(!hidePassword);
   };
 
-  const handleLoginSubmit = async (data) => {
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+  const { signIn } = UserAuth();
+
+  const handleLoginSubmit = async (data, e) => {
     console.log(data);
+    e.target.reset();
+
+    signIn(data.email, data.password).then((result) => {
+      const 
+    })
   };
 
   const {
@@ -23,7 +30,7 @@ export const LoginForm = () => {
   } = useForm();
 
   return (
-    <div className="h-160 lg:px-30 pt-5 px-10 bg-white">
+    <div className="h-170 lg:px-30 pt-5 px-10 bg-white">
       <div className="text-center">
         <h1 className="text-3xl font-semibold">Welcome Back</h1>
         <p>

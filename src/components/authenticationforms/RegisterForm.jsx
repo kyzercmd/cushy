@@ -24,7 +24,7 @@ export const RegisterForm = () => {
   } = useForm();
   return (
     <div>
-      <div className="h-160 lg:px-30 pt-5 px-10 bg-white">
+      <div className="h-170 lg:px-30 pt-5 px-10 bg-white">
         <div className="text-center">
           <h1 className="text-3xl font-semibold">Create an Account</h1>
           <p>

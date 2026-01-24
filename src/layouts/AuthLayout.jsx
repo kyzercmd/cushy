@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 export const AuthLayout = ({ children }) => {
   return (
-    <div className="h-160 overflow-hidden max-w-full mx-auto flex justify-between flex-col md:flex-row ">
+    <div className="h-170 overflow-hidden max-w-full mx-auto flex justify-between flex-col md:flex-row ">
       <div className="md:w-1/2 md:flex bg-slate-100 justify-end items-end hidden relative">
         <Link
           to="/"
