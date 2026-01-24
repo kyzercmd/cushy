@@ -1,8 +1,9 @@
 import React from "react";
 
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 
-export const ForgotPassword = ({ setFormType }) => {
+export const ForgotPassword = () => {
   const handleLoginSubmit = async (data) => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
     console.log(data);
@@ -49,21 +50,19 @@ export const ForgotPassword = ({ setFormType }) => {
             <span className="text-red-700">*{errors.email.message}</span>
           )}
 
-          <div className="bg-blue-500 text-sm text-center p-2 rounded-box text-slate-200 font-semibold">
-            <button>SEND</button>
+          <div className="bg-blue-500 hover:bg-blue-600 transition-colors duration-200  text-sm text-center p-2 rounded-box text-slate-200 font-semibold">
+            <button>Send</button>
           </div>
         </form>
       </div>
       <div className="text-center mt-5 text-slate-700">
         Back to {""}
-        <span
+        <Link
+          to="/login"
           className="text-blue-500 font-semibold hover:cursor-pointer hover:link"
-          onClick={() => {
-            setFormType("login");
-          }}
         >
           Login
-        </span>
+        </Link>
       </div>
     </div>
   );

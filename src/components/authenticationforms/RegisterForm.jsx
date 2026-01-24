@@ -2,8 +2,9 @@ import React from "react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
+import { Link } from "react-router-dom";
 
-export const RegisterForm = ({ setFormType }) => {
+export const RegisterForm = () => {
   const [hidePassword, setHidePassword] = useState(true);
 
   const handleHidePassword = () => {
@@ -23,7 +24,7 @@ export const RegisterForm = ({ setFormType }) => {
   } = useForm();
   return (
     <div>
-      <div className="h-full lg:px-30 p-15 bg-white">
+      <div className="h-160 lg:px-30 pt-5 px-10 bg-white">
         <div className="text-center">
           <h1 className="text-3xl font-semibold">Create an Account</h1>
           <p>
@@ -118,14 +119,10 @@ export const RegisterForm = ({ setFormType }) => {
               )}
             </div>
 
-            <div className="flex justify-between my-3">
-              <label className="label">
-                <input
-                  type="checkbox"
-                  defaultunChecked
-                  className="checkbox text-slate-700"
-                />
-                I agree to the{" "}
+            <div className="flex justify-between my-3 flex-wrap">
+              <label className="label flex flex-wrap">
+                <input type="checkbox" className="checkbox text-slate-700" />I
+                agree to the{" "}
                 <span className="text-blue-500 hover:cursor-pointer hover:link">
                   Terms and Privacy Policy.
                 </span>
@@ -138,14 +135,12 @@ export const RegisterForm = ({ setFormType }) => {
         </div>
         <div className="text-center mt-5 text-slate-700">
           Already have an Account?{" "}
-          <span
+          <Link
+            to="/login"
             className="text-blue-500 font-semibold hover:cursor-pointer hover:link"
-            onClick={() => {
-              setFormType("login");
-            }}
           >
             Sign In
-          </span>
+          </Link>
         </div>
       </div>
     </div>

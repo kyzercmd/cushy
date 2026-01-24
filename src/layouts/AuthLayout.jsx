@@ -2,16 +2,14 @@ import React from "react";
 import { RegisterForm } from "../components/authenticationforms/RegisterForm";
 import { LoginForm } from "../components/authenticationforms/LoginForm";
 import { ForgotPassword } from "../components/authenticationforms/ForgotPassword";
-import { useState } from "react";
+
 import Loginillust from "../assets/loginillust3.svg";
 import { Armchair } from "lucide-react";
 import { Link } from "react-router-dom";
 
-export const Login = () => {
-  const [formType, setFormType] = useState("login");
-
+export const AuthLayout = ({ children }) => {
   return (
-    <div className="h-150 overflow-hidden max-w-full mx-auto flex justify-between flex-col md:flex-row ">
+    <div className="h-160 overflow-hidden max-w-full mx-auto flex justify-between flex-col md:flex-row ">
       <div className="md:w-1/2 md:flex bg-slate-100 justify-end items-end hidden relative">
         <Link
           to="/"
@@ -32,15 +30,7 @@ export const Login = () => {
         ></img>
       </div>
 
-      <div className="md:w-1/2 w-full mx-auto ">
-        {formType === "login" ? (
-          <LoginForm setFormType={setFormType} />
-        ) : formType === "register" ? (
-          <RegisterForm setFormType={setFormType} />
-        ) : (
-          <ForgotPassword setFormType={setFormType} />
-        )}
-      </div>
+      <div className="md:w-1/2 w-full mx-auto ">{children}</div>
     </div>
   );
 };

@@ -8,7 +8,9 @@ export const Profilebar = () => {
           <Link to="/login" className="hover:link text-slate-300 text-sm mr-5">
             Sign in / Guest
           </Link>
-          <a className="hover:link text-slate-300 text-sm">Create Account</a>
+          <Link to="/register" className="hover:link text-slate-300 text-sm">
+            Create Account
+          </Link>
         </div>
       </div>
     </>

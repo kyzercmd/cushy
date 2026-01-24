@@ -1,10 +1,10 @@
 import React from "react";
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 
-export const LoginForm = ({ setFormType }) => {
+export const LoginForm = () => {
   const [hidePassword, setHidePassword] = useState(true);
 
   const handleHidePassword = () => {
@@ -23,7 +23,7 @@ export const LoginForm = ({ setFormType }) => {
   } = useForm();
 
   return (
-    <div className="h-full lg:px-30 p-15 bg-white">
+    <div className="h-160 lg:px-30 pt-5 px-10 bg-white">
       <div className="text-center">
         <h1 className="text-3xl font-semibold">Welcome Back</h1>
         <p>
@@ -85,41 +85,33 @@ export const LoginForm = ({ setFormType }) => {
 
           <div className="flex justify-between flex-col sm:flex-row gap-2 my-3">
             <label className="label">
-              <input
-                type="checkbox"
-                defaultunChecked
-                className="checkbox text-slate-700"
-              />
+              <input type="checkbox" className="checkbox text-slate-700" />
               Remember me
             </label>
-            <div
+            <Link
+              to="/forgotpassword"
               className="hover:text-blue-500 text-gray-600 hover:cursor-pointer font-medium text-base"
-              onClick={() => {
-                setFormType("forogt");
-              }}
             >
               Forgot password
-            </div>
+            </Link>
           </div>
-          <div className="bg-blue-500 text-sm text-center p-2 rounded-box text-slate-200 font-semibold">
+          <div className="bg-blue-500 hover:bg-blue-600 transition-colors duration-200 text-sm text-center p-2 rounded-box text-slate-200 font-semibold">
             <button>Sign In</button>
           </div>
           <div className=" text-center text-slate-600 font-medium">OR</div>
-          <div className="text-center text-sm bg-gray-300 p-2 rounded-box font-semibold">
+          <div className="text-center text-sm bg-gray-200 hover:bg-gray-300 transition-colors duration-200  p-2 rounded-box font-semibold">
             Sign In with Google
           </div>
         </form>
       </div>
       <div className="text-center mt-5 text-slate-700">
         Don't have an account?{" "}
-        <span
+        <Link
+          to="/register"
           className="text-blue-500 font-semibold hover:cursor-pointer hover:link"
-          onClick={() => {
-            setFormType("register");
-          }}
         >
           Create an account
-        </span>
+        </Link>
       </div>
     </div>
   );
