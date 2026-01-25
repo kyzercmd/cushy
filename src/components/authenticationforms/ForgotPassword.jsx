@@ -2,6 +2,7 @@ import React from "react";
 
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import { Armchair } from "lucide-react";
 
 export const ForgotPassword = () => {
   const handleLoginSubmit = async (data) => {
@@ -16,8 +17,20 @@ export const ForgotPassword = () => {
   } = useForm();
 
   return (
-    <div className="h-170 lg:px-30 p-15 bg-white flex-col flex gap-10">
+    <div className="min-h-screen lg:px-30 px-10 pt-5 md:pt-15 bg-white flex-col flex gap-10">
       <div className="text-center">
+        <Link
+          to="/"
+          className="md:hidden items-center gap-1 select-none inline-flex mb-3"
+        >
+          <div className="flex items-center justify-center w-10 h-10 bg-slate-700 text-blue-100 rounded-2xl shadow-sm">
+            <Armchair size={26} strokeWidth={2} />
+          </div>
+
+          <h1 className="text-2xl font-bold text-blue-600 tracking-tight">
+            Ever<span className="text-slate-700">Soft.</span>
+          </h1>
+        </Link>
         <h1 className="text-3xl font-semibold mb-5">Forgot Password</h1>
         <p>Enter Email associated with your account to receive a reset link</p>
       </div>
@@ -50,9 +63,9 @@ export const ForgotPassword = () => {
             <span className="text-red-700">*{errors.email.message}</span>
           )}
 
-          <div className="bg-blue-500 hover:bg-blue-600 transition-colors duration-200  text-sm text-center p-2 rounded-box text-slate-200 font-semibold">
-            <button>Send</button>
-          </div>
+          <button className="bg-blue-500 hover:bg-blue-600 transition-colors duration-200  text-sm text-center p-2 rounded-box text-slate-200 font-semibold">
+            Send
+          </button>
         </form>
       </div>
       <div className="text-center mt-5 text-slate-700">

@@ -1,12 +1,18 @@
 import React from "react";
 import { Armchair } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
     <footer className="bg-[#020f24] text-neutral-content p-10 pb-5">
       <div className="flex flex-col md:flex-row justify-between gap-10 max-w-7xl mx-auto text-sm ">
         <aside className="flex flex-col items-start gap-4">
-          <div className="items-center gap-2 select-none inline-flex">
+          <div
+            onClick={() => {
+              window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+            }}
+            className="items-center gap-2 select-none inline-flex"
+          >
             <div className="flex items-center justify-center w-10 h-10 bg-slate-700 text-blue-100 rounded-2xl shadow-sm">
               <Armchair size={26} strokeWidth={2} />
             </div>

@@ -60,8 +60,8 @@ export const CategoryShowcase = () => {
             spaceBetween: 40,
           },
         }}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
+        //onSlideChange={() => console.log("slide change")}
+        //onSwiper={(swiper) => console.log(swiper)}
         className="max-w-11/12 md:max-w-6xl "
       >
         {data?.map((item) => (

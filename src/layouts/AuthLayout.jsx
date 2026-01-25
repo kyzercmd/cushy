@@ -9,8 +9,8 @@ import { Link } from "react-router-dom";
 
 export const AuthLayout = ({ children }) => {
   return (
-    <div className="h-170 overflow-hidden max-w-full mx-auto flex justify-between flex-col md:flex-row ">
-      <div className="md:w-1/2 md:flex bg-slate-100 justify-end items-end hidden relative">
+    <div className="max-h-90vh overflow-hidden max-w-full mx-auto flex justify-between flex-col md:flex-row ">
+      <div className="md:w-1/2 md:flex min-h-screen bg-slate-100 justify-end items-end hidden relative">
         <Link
           to="/"
           className="absolute top-0 left-0 pl-5 pt-5 items-center  gap-2 select-none inline-flex "

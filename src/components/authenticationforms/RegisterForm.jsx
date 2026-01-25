@@ -2,30 +2,64 @@ import React from "react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { UserAuth } from "../../providers/AuthContext";
+import { Armchair } from "lucide-react";
 
 export const RegisterForm = () => {
   const [hidePassword, setHidePassword] = useState(true);
+  const { createUser, setUser, updateProfile } = UserAuth();
+  const Navigate = useNavigate();
+
+  const {
+    register,
+    handleSubmit,
+    watch,
+    reset,
+    formState: { errors },
+  } = useForm();
 
   const handleHidePassword = () => {
     setHidePassword(!hidePassword);
   };
 
   const handleRegisterSubmit = async (data) => {
-    await new Promise((resolve) => setTimeout(resolve, 1000));
     console.log(data);
+
+    createUser(data.email, data.password)
+      .then(async (result) => {
+        const currentUser = result.user;
+        setUser(currentUser);
+        if (currentUser) {
+          await updateProfile(currentUser, {
+            displayName: data.name,
+          });
+        }
+        reset();
+        console.log("user set");
+        Navigate("/");
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
   };
 
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors },
-  } = useForm();
   return (
     <div>
-      <div className="h-170 lg:px-30 pt-5 px-10 bg-white">
+      <div className="min-h-screen lg:px-30 pt-5 md:p-15 px-10 bg-white">
         <div className="text-center">
+          <Link
+            to="/"
+            className="md:hidden items-center gap-1 select-none inline-flex mb-3"
+          >
+            <div className="flex items-center justify-center w-10 h-10 bg-slate-700 text-blue-100 rounded-2xl shadow-sm">
+              <Armchair size={26} strokeWidth={2} />
+            </div>
+
+            <h1 className="text-2xl font-bold text-blue-600 tracking-tight">
+              Ever<span className="text-slate-700">Soft.</span>
+            </h1>
+          </Link>
           <h1 className="text-3xl font-semibold">Create an Account</h1>
           <p>
             Your journey with <span className="text-blue-600">Ever</span>
@@ -34,7 +68,7 @@ export const RegisterForm = () => {
         </div>
         <div className="flex flex-col items-center mt-5">
           <form
-            className="w-full flex flex-col gap-2"
+            className="w-full flex flex-col gap-1"
             onSubmit={handleSubmit(handleRegisterSubmit)}
           >
             <p className="text-slate-700">Name</p>
@@ -43,6 +77,7 @@ export const RegisterForm = () => {
               type="text"
               className="text-sm border border-slate-600 focus:shadow-2xl focus:bg-blue-50 focus:ring-0 focus:outline-1 rounded-box p-2 w-full transition-all duration-200 ease-in-out focus:scale-[1.01]"
               placeholder="Name"
+              name="name"
             ></input>
             {errors.name && (
               <span className="text-red-700">*{errors.name.message}</span>
@@ -119,18 +154,25 @@ export const RegisterForm = () => {
               )}
             </div>
 
-            <div className="flex justify-between my-3 flex-wrap">
+            <div className="flex gap-1 my-3 flex-wrap text-slate-700">
               <label className="label flex flex-wrap">
-                <input type="checkbox" className="checkbox text-slate-700" />I
-                agree to the{" "}
-                <span className="text-blue-500 hover:cursor-pointer hover:link">
-                  Terms and Privacy Policy.
-                </span>
+                {errors.terms && <span className="text-red-700">*</span>}
+                <input
+                  {...register("terms", {
+                    required: true,
+                  })}
+                  type="checkbox"
+                  className="checkbox text-slate-700"
+                />
               </label>
+              I agree to the{" "}
+              <span className="text-blue-500 hover:cursor-pointer hover:link">
+                Terms and Privacy Policy.
+              </span>
             </div>
-            <div className="bg-blue-500 text-sm text-center p-2 rounded-box text-slate-200 font-semibold">
-              <button>Create Account</button>
-            </div>
+            <button className="bg-blue-500 text-sm text-center p-2 rounded-box text-slate-200 font-semibold">
+              Create Account
+            </button>
           </form>
         </div>
         <div className="text-center mt-5 text-slate-700">
