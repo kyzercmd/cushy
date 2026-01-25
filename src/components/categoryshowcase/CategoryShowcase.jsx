@@ -16,13 +16,12 @@ export const CategoryShowcase = () => {
   return (
     <div className="lg:max-w-6xl max-w-11/12 mx-auto my-30">
       <div className="max-w-10/12 flex flex-col m-auto text-center">
-        <div className=" text-[#021431] text-3xl tracking-widest font-medium">
+        <div className=" text-[#021431] text-3xl tracking-widest font-medium font-[Instrument-sans]">
           Curate Your Space
         </div>
-        <p className="text-[#131313cc] mt-2 text-[18px] leading-relaxed antialiased">
-          Find comfort for every corner. From deep-seated sofas to artisan
-          dining tables, explore our curated collections designed to make your
-          home the ultimate sanctuary.
+        <p className="text-[#131313cc] mt-2 text-[18px] leading-relaxed antialiased ">
+          Resulting in a collection of relaxed silhouettes and a calm, soothing
+          color palette.
         </p>
       </div>
 

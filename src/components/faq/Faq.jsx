@@ -6,10 +6,10 @@ export const Faq = () => {
   return (
     <div className="lg:max-w-6xl max-w-11/12 m-auto my-30">
       <div className=" flex flex-col mx-auto text-center mb-5 ">
-        <div className=" text-[#021431] text-3xl tracking-widest  font-medium">
+        <div className=" text-[#021431] text-3xl tracking-widest  font-medium font-[Instrument-sans]">
           Frequenty Asked Questions (FAQs)
         </div>
-        <p className="text-[#131313cc] mt-2 leading-relaxed antialiased text-[18px]">
+        <p className="max-w-5/6 m-auto text-[#131313cc] mt-2 leading-relaxed antialiased text-[18px]">
           Got questions? We've got answers. Explore our quick guide to shipping,
           assembly, and returns to see how we're making furniture shopping
           easier than ever.
@@ -73,7 +73,7 @@ export const Faq = () => {
       <div className="flex mt-5">
         <Link
           to="/contact"
-          className="btn m-auto bg-blue-500 hover:bg-blue-600 text-slate-200 font-bold rounded-box px-5 py-5 text-sm"
+          className="btn m-auto btn-outline hover:bg-blue-600 hover:text-slate-200 transition-all duration-300 hover:shadow-2xl text-blue-500 font-bold rounded-box px-5 py-5 text-sm"
         >
           More FAQs
           <SquareArrowOutUpRight size={15} strokeWidth={3} />
