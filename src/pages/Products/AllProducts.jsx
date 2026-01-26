@@ -1,10 +1,10 @@
 import React from "react";
 import { useState } from "react";
-import { useSearchParams } from "react-router-dom";
-import { useProductFetch } from "../hooks/useProductFetch";
-import { ProductCard } from "../ui/ProductCard";
-import { SearchFilter } from "../components/searchfilter/SearchFilter";
-import { CategoryInfo } from "../components/categoryinfo/CategoryInfo";
+import { useSearchParams } from "react-router";
+import { useProductFetch } from "../../hooks/useProductFetch";
+import { ProductCard } from "../../ui/ProductCard";
+import { SearchFilter } from "./SearchFilter";
+import { CategoryInfo } from "./CategoryInfo";
 
 export const AllProducts = () => {
   //const [ view, setview ] = useState(1);

@@ -1,11 +1,11 @@
 import React from "react";
-import { RegisterForm } from "../components/authenticationforms/RegisterForm";
-import { LoginForm } from "../components/authenticationforms/LoginForm";
-import { ForgotPassword } from "../components/authenticationforms/ForgotPassword";
+import { RegisterForm } from "../components/authforms/RegisterForm";
+import { LoginForm } from "../components/authforms/LoginForm";
+import { ForgotPassword } from "../components/authforms/ForgotPassword";
 
 import Loginillust from "../assets/loginillust3.svg";
 import { Armchair } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 
 export const AuthLayout = ({ children }) => {
   return (

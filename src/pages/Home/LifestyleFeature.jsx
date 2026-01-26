@@ -1,6 +1,6 @@
 import React from "react";
 import LifeStyle from "../../assets/featurehero3.jpg";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 
 export const LifestyleFeature = () => {
   return (

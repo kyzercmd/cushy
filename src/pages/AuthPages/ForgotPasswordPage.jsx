@@ -1,6 +1,6 @@
 import React from "react";
-import { AuthLayout } from "../layouts/AuthLayout";
-import { ForgotPassword } from "../components/authenticationforms/ForgotPassword";
+import { AuthLayout } from "../../layouts/AuthLayout";
+import { ForgotPassword } from "../../components/authforms/ForgotPassword";
 
 export const ForgotPasswordPage = () => {
   return (

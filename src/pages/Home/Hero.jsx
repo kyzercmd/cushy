@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import Typewriter from "typewriter-effect";
 
 import hero1 from "../../assets/hero1.png";

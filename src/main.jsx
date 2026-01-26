@@ -1,6 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router";
 import { ScrollToTop } from "./helper/ScrollToTop.jsx";
 import { AuthContextProvider } from "./providers/AuthContext.jsx";
 import "./index.css";

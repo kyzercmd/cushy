@@ -1,6 +1,6 @@
 import { useProductFetch } from "../../hooks/useProductFetch";
 import { ProductCard } from "../../ui/ProductCard";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { SquareArrowOutUpRight } from "lucide-react";
 
 export const FeaturedProducts = () => {
