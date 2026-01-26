@@ -27,7 +27,7 @@ export const FeaturedProducts = () => {
       <div
         className={
           isLoading
-            ? "loading loading-ring loading-xl m-auto flex h-100"
+            ? "loading loading-dots loading-xl m-auto flex h-screen"
             : "border-b border-dashed border-slate-300 mt-5 mb-10"
         }
       ></div>

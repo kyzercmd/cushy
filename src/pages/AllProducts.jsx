@@ -67,7 +67,7 @@ export const AllProducts = () => {
         <div
           className={
             isLoading
-              ? "loading loading-ring loading-xl m-auto flex h-100"
+              ? "loading loading-dots loading-xl m-auto flex h-100"
               : "border-b border-slate-300 mt-5 mb-10"
           }
         ></div>

@@ -6,6 +6,8 @@ import {
   updateProfile,
   onAuthStateChanged,
   getAuth,
+  GoogleAuthProvider,
+  signInWithPopup,
 } from "firebase/auth";
 import app from "../firebase/firebase";
 
@@ -19,6 +21,11 @@ export const UserAuth = () => {
 export const AuthContextProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+
+  const googleSignIn = () => {
+    const provider = new GoogleAuthProvider();
+    return signInWithPopup(auth, provider);
+  };
 
   const createUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
@@ -54,12 +61,13 @@ export const AuthContextProvider = ({ children }) => {
     logOut,
     updateProfile,
     loading,
+    googleSignIn,
   };
 
   if (loading) {
     return (
       <div className="h-screen flex items-center justify-center">
-        Loading...
+        <span className="loading loading-dots loading-xl"></span>
       </div>
     );
   }

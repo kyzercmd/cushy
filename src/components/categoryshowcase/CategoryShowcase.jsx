@@ -28,7 +28,7 @@ export const CategoryShowcase = () => {
       <div
         className={
           isLoading
-            ? "loading loading-ring loading-xl m-auto flex h-40"
+            ? "loading loading-dots loading-xl m-auto flex h-40"
             : "mt-5 "
         }
       ></div>

@@ -6,11 +6,10 @@ export const Profilebar = () => {
   const { user, logOut } = UserAuth();
 
   const handleSignOut = async () => {
-    console.log("Signing out");
     try {
       await logOut();
 
-      // console.log("SIgned out");
+      user ? console.log("user") : console.log("no");
     } catch (error) {
       console.log(error);
     }
@@ -23,7 +22,7 @@ export const Profilebar = () => {
           {user ? (
             <div>
               <span className="hover:link text-slate-300 text-sm mr-5">
-                Signed in as {user.displayName || user.email}
+                Welcome, {user.displayName || user.email}
               </span>
               <button
                 onClick={handleSignOut}
