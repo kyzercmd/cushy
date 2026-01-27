@@ -10,6 +10,7 @@ import { LoginPage } from "../pages/AuthPages/LoginPage";
 import { RegisterPage } from "../pages/AuthPages/RegisterPage";
 import { ForgotPasswordPage } from "../pages/AuthPages/ForgotPasswordPage";
 import { PageNotFound } from "../pages/PageNotFound/PageNotFound";
+import { ProductDetails } from "../pages/ProductDetails/ProductDetails";
 
 export const AllRoutes = () => {
   return (
@@ -22,6 +23,7 @@ export const AllRoutes = () => {
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />}></Route>
           <Route path="products" element={<AllProducts />}></Route>
+          <Route path="products/:sku" element={<ProductDetails />}></Route>
           <Route path="about" element={<About />}></Route>
           <Route path="contact" element={<Contact />}></Route>
           <Route path="cart" element={<Cart />}></Route>

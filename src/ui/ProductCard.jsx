@@ -1,3 +1,6 @@
+import { ProductDetails } from "../pages/ProductDetails/ProductDetails";
+import { Link } from "react-router";
+
 export const ProductCard = ({ product }) => {
   return (
     <div className="group w-60 h-100 m-auto transition-shadow duration-500 overflow-hidden ">
@@ -12,9 +15,13 @@ export const ProductCard = ({ product }) => {
             <div className="absolute top-2 left-2 capitalize font-semibold text-sm text-[#f4f5c9] bg-[#141a20ce] rounded-box py-2 px-4 ">
               {product.wood_type}
             </div>
-            <button className="bg-slate-800/90 text-slate-200 w-full p-3 z-10 absolute bottom-0 justify-center text-center m-auto items-center translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 text-sm font-semibold hover:cursor-pointer">
+            <Link
+              to={`/products/${product.sku}`}
+              state={{ product }}
+              className="bg-slate-800/90 text-slate-200 w-full p-3 z-10 absolute bottom-0 justify-center text-center m-auto items-center translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 text-sm font-semibold hover:cursor-pointer"
+            >
               View Details
-            </button>
+            </Link>
           </div>
         </div>
 
