@@ -1,7 +1,7 @@
 import React from "react";
 import sleep from "../../assets/sleep.svg";
 import timeflies from "../../assets/timeflies.svg";
-import environment from "../../assets/environment.svg";
+import environment from "../../assets/Environment.svg";
 
 export const BrandPhilosophy = () => {
   return (
