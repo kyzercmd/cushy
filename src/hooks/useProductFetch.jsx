@@ -38,7 +38,7 @@ export const useProductFetch = ({
         return json.data;
       }
 
-      const fetchLimit = featured ? 9 : limit;
+      const fetchLimit = featured ? 8 : limit;
       const offset = (page - 1) * limit;
       let url = `https://furniture-api.fly.dev/v1/products?limit=${fetchLimit}&offset=${offset}`;
 
