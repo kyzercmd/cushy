@@ -5,7 +5,7 @@ import { Home } from "../pages/Home/Home";
 import { About } from "../pages/About/About";
 import { AllProducts } from "../pages/Products/AllProducts";
 import { Contact } from "../pages/Contact/Contact";
-import { Cart } from "../pages/Cart";
+
 import { LoginPage } from "../pages/AuthPages/LoginPage";
 import { RegisterPage } from "../pages/AuthPages/RegisterPage";
 import { ForgotPasswordPage } from "../pages/AuthPages/ForgotPasswordPage";
@@ -26,7 +26,6 @@ export const AllRoutes = () => {
           <Route path="products/:sku" element={<ProductDetails />}></Route>
           <Route path="about" element={<About />}></Route>
           <Route path="contact" element={<Contact />}></Route>
-          <Route path="cart" element={<Cart />}></Route>
         </Route>
       </Routes>
     </>

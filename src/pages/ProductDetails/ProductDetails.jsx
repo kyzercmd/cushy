@@ -1,4 +1,5 @@
 import { useLocation, useParams } from "react-router";
+import { useCart } from "../../providers/CartContext";
 import { useProductFetch } from "../../hooks/useProductFetch";
 import { PageNotFound } from "../PageNotFound/PageNotFound";
 import {
@@ -13,6 +14,7 @@ import {
 import { useState } from "react";
 
 export const ProductDetails = () => {
+  const { addToCart } = useCart();
   const location = useLocation();
   const { sku } = useParams();
   const [itemCount, setItemCount] = useState(1);
@@ -63,7 +65,7 @@ export const ProductDetails = () => {
               Finish: {product.finish}
             </p>
             <div className="flex flex-row gap-2 text-xl text-blue-800">
-              <div className=" pt-2  font-semibold line-through decoration-red-800 decoration-2">
+              <div className=" pt-2  font-semibold line-through decoration-red-900 decoration-2">
                 ${product.price}
               </div>
               <div className=" pt-2  font-semibold">
@@ -120,7 +122,12 @@ export const ProductDetails = () => {
                     }}
                   />
                 </div>
-                <button className="text-sm rounded-box font-bold text-slate-200 bg-slate-900 hover:border-slate-600 hover:bg-slate-800  transition-all hover:cursor-pointer p-3 md:px-10 border">
+                <button
+                  onClick={() => {
+                    addToCart(product);
+                  }}
+                  className="text-sm rounded-box font-bold text-slate-200 bg-slate-900 hover:border-slate-600 hover:bg-slate-800  transition-all hover:cursor-pointer p-3 md:px-10 border"
+                >
                   Add to Cart
                 </button>
               </div>
