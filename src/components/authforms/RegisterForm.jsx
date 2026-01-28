@@ -5,6 +5,7 @@ import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 import { Link, useNavigate } from "react-router";
 import { UserAuth } from "../../providers/AuthContext";
 import { Armchair } from "lucide-react";
+import * as motion from "motion/react-client";
 
 export const RegisterForm = () => {
   const [hidePassword, setHidePassword] = useState(true);
@@ -45,7 +46,13 @@ export const RegisterForm = () => {
   };
 
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0, scale: 0 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{
+        duration: 0.3,
+      }}
+    >
       <div className="min-h-screen lg:px-30 pt-5 md:p-15 px-10 bg-white">
         <div className="text-center">
           <Link
@@ -185,6 +192,6 @@ export const RegisterForm = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };

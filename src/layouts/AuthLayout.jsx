@@ -1,8 +1,3 @@
-import React from "react";
-import { RegisterForm } from "../components/authforms/RegisterForm";
-import { LoginForm } from "../components/authforms/LoginForm";
-import { ForgotPassword } from "../components/authforms/ForgotPassword";
-
 import Loginillust from "../assets/loginillust3.svg";
 import { Armchair } from "lucide-react";
 import { Link } from "react-router";

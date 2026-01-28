@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { UserAuth } from "../../providers/AuthContext";
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 import { Armchair } from "lucide-react";
+import * as motion from "motion/react-client";
 
 export const LoginForm = () => {
   const [hidePassword, setHidePassword] = useState(true);
@@ -46,7 +47,14 @@ export const LoginForm = () => {
   };
 
   return (
-    <div className="min-h-screen lg:px-30 pt-5 md:pt-15 px-10 bg-white">
+    <motion.div
+      initial={{ opacity: 0, scale: 0 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{
+        duration: 0.3,
+      }}
+      className="min-h-screen lg:px-30 pt-5 md:pt-15 px-10 bg-white"
+    >
       <div className=" text-center flex-col flex justify-center items-center">
         <Link
           to="/"
@@ -178,6 +186,6 @@ export const LoginForm = () => {
           Create an account
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };

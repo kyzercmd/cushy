@@ -5,16 +5,31 @@ import { CategoryShowcase } from "./CategoryShowcase";
 import { ValueProposition } from "./ValueProposition";
 import { Faq } from "./Faq";
 import { LifestyleFeature } from "./LifestyleFeature";
+import { ScrollRevealAnimation } from "../../helper/scrollRevealAnimation";
 
 export const Home = () => {
   return (
     <>
       <Hero />
-      <CategoryShowcase />
-      <ValueProposition />
-      <FeaturedProducts />
-      <LifestyleFeature />
-      <Faq />
+
+      <ScrollRevealAnimation>
+        <CategoryShowcase />
+      </ScrollRevealAnimation>
+
+      <ScrollRevealAnimation>
+        <ValueProposition />
+      </ScrollRevealAnimation>
+
+      <ScrollRevealAnimation>
+        <FeaturedProducts />
+      </ScrollRevealAnimation>
+
+      <ScrollRevealAnimation>
+        <LifestyleFeature />
+      </ScrollRevealAnimation>
+      <ScrollRevealAnimation>
+        <Faq />
+      </ScrollRevealAnimation>
     </>
   );
 };

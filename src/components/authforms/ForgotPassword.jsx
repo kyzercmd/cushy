@@ -1,5 +1,5 @@
 import React from "react";
-
+import * as motion from "motion/react-client";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router";
 import { Armchair } from "lucide-react";
@@ -17,7 +17,14 @@ export const ForgotPassword = () => {
   } = useForm();
 
   return (
-    <div className="min-h-screen lg:px-30 px-10 pt-5 md:pt-15 bg-white flex-col flex gap-10">
+    <motion.div
+      initial={{ opacity: 0, scale: 0 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{
+        duration: 0.3,
+      }}
+      className="min-h-screen lg:px-30 px-10 pt-5 md:pt-15 bg-white flex-col flex gap-10"
+    >
       <div className="text-center">
         <Link
           to="/"
@@ -77,6 +84,6 @@ export const ForgotPassword = () => {
           Login
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };
