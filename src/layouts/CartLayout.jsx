@@ -20,9 +20,9 @@ export const CartLayout = ({ children }) => {
 
             <div className="flex-1 overflow-y-auto flex-col gap-2 font-[inter]">
               <span className="p-3">YOUR CART</span>
-              {cartItems.map((item, index) => (
+              {cartItems.map((item) => (
                 <div
-                  key={index}
+                  key={item.id}
                   className="flex justify-between items-center p-3 border-b border-slate-300"
                 >
                   <div className="flex">
