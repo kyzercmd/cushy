@@ -179,7 +179,7 @@ export const Header = () => {
           <label htmlFor="my-drawer-5">
             <div className="indicator btn btn-ghost btn-circle btn-base text-slate-800">
               <ShoppingBasket size={20} />
-              <span className="badge badge-sm indicator-item badge-info">
+              <span className="badge badge-sm bg-blue-200 text-slate-900 badge-ghost indicator-item badge-info">
                 {cartItems.length}
               </span>
             </div>

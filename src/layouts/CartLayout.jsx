@@ -25,7 +25,7 @@ export const CartLayout = ({ children }) => {
                   key={index}
                   className="flex justify-between items-center p-3 border-b border-slate-300"
                 >
-                  <div className="flex flex-wrap">
+                  <div className="flex">
                     <div className="w-16 h-16 rounded-md overflow-hidden mr-3">
                       <img
                         src={item.image_path}

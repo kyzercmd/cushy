@@ -1,4 +1,4 @@
-import { useLocation, useParams } from "react-router";
+import { useLocation, useParams, useNavigate } from "react-router";
 import { useCart } from "../../providers/CartContext";
 import { useProductFetch } from "../../hooks/useProductFetch";
 import { PageNotFound } from "../PageNotFound/PageNotFound";
@@ -20,6 +20,7 @@ export const ProductDetails = () => {
   const [itemCount, setItemCount] = useState(1);
 
   const stateProduct = location.state?.product;
+  const navigate = useNavigate();
 
   const {
     data: fetchProduct,
@@ -45,7 +46,20 @@ export const ProductDetails = () => {
   const product = stateProduct || fetchProduct;
 
   return (
-    <div className="lg:max-w-6xl max-w-11/12 m-auto overflow-hidden my-10">
+    <div className="lg:max-w-6xl max-w-11/12 m-auto overflow-hidden mb-10">
+      <div className="breadcrumbs text-base mt-10 select-none">
+        <ul>
+          <li
+            onClick={() => {
+              navigate(-1);
+            }}
+            className="hover:text-blue-600 hover:cursor-pointer"
+          >
+            Products
+          </li>
+          <li>Product</li>
+        </ul>
+      </div>
       <div className="flex flex-col md:flex-row overflow-hidden min-h-100">
         <div className="relative flex w-full md:w-1/2 h-120 md:h-auto">
           <img
