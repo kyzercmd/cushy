@@ -3,7 +3,7 @@ import Story from "../../assets/our-story.jpg";
 
 export const BrandMission = () => {
   return (
-    <div className="lg:max-w-6xl max-w-11/12 m-auto flex flex-col md:p-20 p-5 mt-5 mb-10 rounded-4xl bg-white border border-base-300 shadow-sm">
+    <div className="lg:max-w-6xl max-w-11/12 m-auto flex flex-col md:p-20 p-5 mt-5 mb-10 rounded-4xl bg-white shadow-sm">
       <div className="border-b-2  border-gray-300">
         <h1 className="text-[#021431] md:text-4xl text-2xl tracking-wide font-semibold font-[Playfair_Display]">
           Furniture for the<br></br> Forever Home

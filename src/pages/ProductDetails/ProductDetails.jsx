@@ -64,12 +64,12 @@ export const ProductDetails = () => {
             <p className="text-stone-600 text-lg font-bold">
               Finish: {product.finish}
             </p>
-            <div className="flex flex-row gap-2 text-xl text-blue-800">
+            <div className="flex flex-row gap-2 text-xl text-blue-900">
               <div className=" pt-2  font-semibold line-through decoration-red-900 decoration-2">
                 ${product.price}
               </div>
               <div className=" pt-2  font-semibold">
-                ${product.discount_price}
+                ${product.discount_price}.00
               </div>
             </div>
             <div className="border-b border-slate-400 my-3"></div>
@@ -106,7 +106,7 @@ export const ProductDetails = () => {
                   </div>
                 )}
               </div>
-              <div className="flex">
+              <div className="flex select-none">
                 <div className="border rounded-box border-slate-300 flex items-center justify-center gap-5 p-2 md:px-3 font-semibold">
                   <Minus
                     size={15}
@@ -124,7 +124,7 @@ export const ProductDetails = () => {
                 </div>
                 <button
                   onClick={() => {
-                    addToCart(product);
+                    addToCart(product, itemCount);
                   }}
                   className="text-sm rounded-box font-bold text-slate-200 bg-slate-900 hover:border-slate-600 hover:bg-slate-800  transition-all hover:cursor-pointer p-3 md:px-10 border"
                 >

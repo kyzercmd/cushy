@@ -5,7 +5,7 @@ import { useCart } from "../../providers/CartContext";
 export const Header = () => {
   const { cartItems } = useCart();
   return (
-    <div className="border-b border-base-300 navbar bg-white shadow-sm max-w-8xl mx-auto rounded-2xl py-1">
+    <div className="navbar max-w-8xl mx-auto rounded-2xl py-1 bg-white shadow-sm">
       <div className="w-full md:max-w-6xl mx-auto flex justify-between">
         <div className="navbar-start">
           <div className="dropdown">

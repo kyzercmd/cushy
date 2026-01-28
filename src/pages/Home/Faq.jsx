@@ -16,7 +16,7 @@ export const Faq = () => {
         </p>
       </div>
       <div>
-        <div className="collapse collapse-arrow bg-base-100 border border-base-300 mb-1 shadow-sm p-1 rounded-2xl">
+        <div className="collapse collapse-arrow bg-base-100 mb-1 shadow-sm p-1 rounded-2xl">
           <input type="radio" name="my-accordion-2" defaultChecked />
           <div className="collapse-title font-bold font-[Urbanist] text-[#021431]">
             How long does delivery take?
@@ -26,7 +26,7 @@ export const Faq = () => {
             shipping and professional white-glove delivery on every order.
           </div>
         </div>
-        <div className="rounded-2xl collapse collapse-arrow bg-base-100 border border-base-300 mb-1 shadow-sm p-1">
+        <div className="rounded-2xl collapse collapse-arrow bg-base-100 mb-1 shadow-sm p-1">
           <input type="radio" name="my-accordion-2" />
           <div className="collapse-title font-bold font-[Urbanist] text-[#021431]">
             What is the 365-day home trial?
@@ -37,7 +37,7 @@ export const Faq = () => {
             a full refund.
           </div>
         </div>
-        <div className="rounded-2xl collapse collapse-arrow bg-base-100 border border-base-300 mb-1 shadow-sm p-1">
+        <div className="rounded-2xl collapse collapse-arrow bg-base-100 mb-1 shadow-sm p-1">
           <input type="radio" name="my-accordion-2" />
           <div className="collapse-title font-bold font-[Urbanist] text-[#021431]">
             Are your materials sustainable?
@@ -48,7 +48,7 @@ export const Faq = () => {
             earth.
           </div>
         </div>
-        <div className="rounded-2xl collapse collapse-arrow bg-base-100 border border-base-300 mb-1 shadow-sm p-1">
+        <div className="rounded-2xl collapse collapse-arrow bg-base-100 mb-1 shadow-sm p-1">
           <input type="radio" name="my-accordion-2" />
           <div className="collapse-title font-bold font-[Urbanist] text-[#021431]">
             Do I have to assemble the furniture myself?
@@ -58,7 +58,7 @@ export const Faq = () => {
             you, ensuring your new piece is perfectly placed and ready to use.
           </div>
         </div>
-        <div className="rounded-2xl collapse collapse-arrow bg-base-100 border border-base-300 mb-1 shadow-sm p-1">
+        <div className="rounded-2xl collapse collapse-arrow bg-base-100 mb-1 shadow-sm p-1">
           <input type="radio" name="my-accordion-2" />
           <div className="collapse-title font-bold font-[Urbanist] text-[#021431]">
             What kind of warranty do you provide?
