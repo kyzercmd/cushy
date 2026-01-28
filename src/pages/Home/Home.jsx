@@ -5,7 +5,7 @@ import { CategoryShowcase } from "./CategoryShowcase";
 import { ValueProposition } from "./ValueProposition";
 import { Faq } from "./Faq";
 import { LifestyleFeature } from "./LifestyleFeature";
-import { ScrollRevealAnimation } from "../../helper/scrollRevealAnimation";
+import { ScrollRevealAnimation } from "../../helper/ScrollRevealAnimation";
 
 export const Home = () => {
   return (
