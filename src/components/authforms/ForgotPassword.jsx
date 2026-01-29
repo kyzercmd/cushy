@@ -1,19 +1,28 @@
 import React from "react";
+import { useState } from "react";
 import * as motion from "motion/react-client";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router";
 import { Armchair } from "lucide-react";
+import { UserAuth } from "../../providers/AuthContext";
 
 export const ForgotPassword = () => {
+  const [sendStatus, setSendStatus] = useState(false);
+  const { passwordReset } = UserAuth();
+
   const handleLoginSubmit = async (data) => {
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    console.log(data);
+    try {
+      await passwordReset(data.email);
+      setSendStatus(true);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm();
 
   return (
@@ -42,6 +51,11 @@ export const ForgotPassword = () => {
         <p>Enter Email associated with your account to receive a reset link</p>
       </div>
       <div className="flex flex-col items-center mt-5 ">
+        {sendStatus && (
+          <span className="text-blue-600 font-semibold tracking-[0.2em] uppercase text-sm mb-4 block text-center">
+            Password reset instructions sent successfully
+          </span>
+        )}
         <form
           className="w-full flex flex-col gap-5"
           onSubmit={handleSubmit(handleLoginSubmit)}
@@ -70,7 +84,11 @@ export const ForgotPassword = () => {
             <span className="text-red-700">*{errors.email.message}</span>
           )}
 
-          <button className="bg-blue-500 hover:bg-blue-600 transition-colors duration-200  text-sm text-center p-2 rounded-box text-slate-200 font-semibold">
+          <button
+            type="submit"
+            disabled={isSubmitting}
+            className="bg-blue-500 hover:bg-blue-600 transition-colors duration-200  text-sm text-center p-2 rounded-box text-slate-200 font-semibold disabled:bg-blue-300 select-none"
+          >
             Send
           </button>
         </form>

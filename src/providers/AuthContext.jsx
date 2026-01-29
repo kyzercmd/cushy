@@ -3,11 +3,12 @@ import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
   signOut,
-  updateProfile,
   onAuthStateChanged,
   getAuth,
   GoogleAuthProvider,
   signInWithPopup,
+  updateProfile,
+  sendPasswordResetEmail,
 } from "firebase/auth";
 import app from "../firebase/firebase";
 
@@ -39,6 +40,10 @@ export const AuthContextProvider = ({ children }) => {
     return signOut(auth);
   };
 
+  const passwordReset = (email) => {
+    return sendPasswordResetEmail(auth, email);
+  };
+
   useEffect(() => {
     console.log("observer running");
     const observer = onAuthStateChanged(auth, (currentUser) => {
@@ -59,8 +64,9 @@ export const AuthContextProvider = ({ children }) => {
     setUser,
     signIn,
     logOut,
-    updateProfile,
+    passwordReset,
     loading,
+    updateProfile,
     googleSignIn,
   };
 

@@ -121,8 +121,9 @@ export const Contact = () => {
           )}
           <div className="flex justify-end">
             <button
+              type="submit"
               disabled={isSubmitting}
-              className="btn btn-sm btn-ghost bg-blue-500 rounded-2xl p-5 font-semibold text-slate-200 hover:bg-blue-600"
+              className="btn btn-sm btn-ghost bg-blue-500 rounded-2xl p-5 font-semibold text-slate-200 hover:bg-blue-600 disabled:bg-blue-300 select-none"
             >
               {isSubmitting ? "Submiting.." : "Submit query"}
             </button>

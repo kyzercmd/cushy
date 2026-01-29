@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 const CartContext = createContext();
 
@@ -7,7 +7,15 @@ export const useCart = () => {
 };
 
 export const CartContextProvider = ({ children }) => {
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState(() => {
+    const storedCart = localStorage.getItem("eversoft_cart");
+    return storedCart ? JSON.parse(storedCart) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("eversoft_cart", JSON.stringify(cartItems));
+    console.log("cart saved");
+  }, [cartItems]);
 
   const addToCart = (product, quantity = 1) => {
     setCartItems((prevItems) => {

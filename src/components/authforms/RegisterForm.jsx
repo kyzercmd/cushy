@@ -17,7 +17,7 @@ export const RegisterForm = () => {
     handleSubmit,
     watch,
     reset,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm();
 
   const handleHidePassword = () => {
@@ -27,7 +27,7 @@ export const RegisterForm = () => {
   const handleRegisterSubmit = async (data) => {
     console.log(data);
 
-    createUser(data.email, data.password)
+    await createUser(data.email, data.password)
       .then(async (result) => {
         const currentUser = result.user;
         setUser(currentUser);
@@ -177,7 +177,11 @@ export const RegisterForm = () => {
                 Terms and Privacy Policy.
               </span>
             </div>
-            <button className="bg-blue-500 text-sm text-center p-2 rounded-box text-slate-200 font-semibold">
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="bg-blue-500 text-sm text-center p-2 rounded-box text-slate-200 font-semibold disabled:bg-blue-300 select-none"
+            >
               Create Account
             </button>
           </form>

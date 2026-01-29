@@ -15,7 +15,7 @@ export const LoginForm = () => {
     register,
     handleSubmit,
 
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm();
 
   const handleHidePassword = () => {
@@ -140,7 +140,8 @@ export const LoginForm = () => {
           </div>
           <button
             type="submit"
-            className="bg-blue-500 hover:bg-blue-600 transition-colors duration-200 text-sm text-center p-2 rounded-box text-slate-200 font-semibold"
+            disabled={isSubmitting}
+            className="bg-blue-500 hover:bg-blue-600 transition-colors duration-200 text-sm text-center p-2 rounded-box text-slate-200 font-semibold disabled:bg-blue-300 select-none"
           >
             Sign In
           </button>
