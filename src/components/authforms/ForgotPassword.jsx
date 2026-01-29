@@ -87,7 +87,7 @@ export const ForgotPassword = () => {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="bg-blue-500 hover:bg-blue-600 transition-colors duration-200  text-sm text-center p-2 rounded-box text-slate-200 font-semibold disabled:bg-blue-300 select-none"
+            className="bg-blue-500 hover:bg-blue-600 transition-colors duration-200  text-sm text-center p-2 rounded-box text-slate-200 font-semibold disabled:opacity-50 select-none"
           >
             Send
           </button>

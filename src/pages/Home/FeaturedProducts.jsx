@@ -31,7 +31,7 @@ export const FeaturedProducts = () => {
             : "border-b border-dashed border-slate-300 mt-5 mb-10"
         }
       ></div>
-      <div className="w-full h-full grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-3 grid-cols-1 gap-10">
+      <div className="w-full h-full grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10">
         {featuredItems?.map((item) => (
           <ProductCard key={item.id} product={item} />
         ))}

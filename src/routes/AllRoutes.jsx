@@ -11,6 +11,7 @@ import { RegisterPage } from "../pages/AuthPages/RegisterPage";
 import { ForgotPasswordPage } from "../pages/AuthPages/ForgotPasswordPage";
 import { PageNotFound } from "../pages/PageNotFound/PageNotFound";
 import { ProductDetails } from "../pages/ProductDetails/ProductDetails";
+import { Wishlist } from "../pages/Wishlist/Wishlist";
 
 export const AllRoutes = () => {
   return (
@@ -26,6 +27,7 @@ export const AllRoutes = () => {
           <Route path="products/:sku" element={<ProductDetails />}></Route>
           <Route path="about" element={<About />}></Route>
           <Route path="contact" element={<Contact />}></Route>
+          <Route path="wishlist" element={<Wishlist />}></Route>
         </Route>
       </Routes>
     </>

@@ -123,7 +123,7 @@ export const Contact = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="btn btn-sm btn-ghost bg-blue-500 rounded-2xl p-5 font-semibold text-slate-200 hover:bg-blue-600 disabled:bg-blue-300 select-none"
+              className="btn btn-sm btn-ghost bg-blue-500 rounded-2xl p-5 font-semibold text-slate-200 hover:bg-blue-600 disabled:opacity-50 select-none"
             >
               {isSubmitting ? "Submiting.." : "Submit query"}
             </button>

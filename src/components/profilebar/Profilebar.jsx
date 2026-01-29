@@ -37,7 +37,7 @@ export const Profilebar = () => {
                 to="/login"
                 className="hover:link text-slate-300 text-sm mr-5"
               >
-                Sign in / Guest
+                Sign In
               </Link>
               <Link
                 to="/register"

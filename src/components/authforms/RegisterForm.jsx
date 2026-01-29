@@ -180,7 +180,7 @@ export const RegisterForm = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="bg-blue-500 text-sm text-center p-2 rounded-box text-slate-200 font-semibold disabled:bg-blue-300 select-none"
+              className="bg-blue-500 text-sm text-center p-2 rounded-box text-slate-200 font-semibold disabled:opacity-50 select-none"
             >
               Create Account
             </button>

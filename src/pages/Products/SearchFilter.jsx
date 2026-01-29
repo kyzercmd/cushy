@@ -20,7 +20,7 @@ export const SearchFilter = ({ onSearch, onReset, selectedCategory }) => {
             </legend>
             <input
               type="text"
-              className="input input-sm rounded-box text-sm text-slate-600"
+              className="input input-sm rounded-box text-sm text-slate-600 focus:outline-slate-500"
               placeholder="Type here"
               value={filters.search}
               onChange={(e) => {
@@ -31,12 +31,12 @@ export const SearchFilter = ({ onSearch, onReset, selectedCategory }) => {
         </div>
         <div className="">
           <fieldset className="fieldset w-55">
-            <legend className="fieldset-legend text-slate-700">
+            <legend className="fieldset-legend text-slate-700 ">
               Select Category
             </legend>
             <select
               value={filters.category}
-              className="select select-sm rounded-box text-slate-600 text-sm capitalize "
+              className="select select-sm rounded-box text-slate-600 focus:outline-slate-500 text-sm capitalize "
               onChange={(e) => {
                 setFilters({ ...filters, category: e.target.value });
               }}
@@ -64,7 +64,7 @@ export const SearchFilter = ({ onSearch, onReset, selectedCategory }) => {
             </legend>
             <select
               value={filters.woodType}
-              className="select select-sm rounded-box text-slate-600 text-sm capitalize"
+              className="select select-sm rounded-box text-slate-600 focus:outline-slate-500 text-sm capitalize"
               onChange={(e) => {
                 setFilters({ ...filters, woodType: e.target.value });
               }}
@@ -85,7 +85,7 @@ export const SearchFilter = ({ onSearch, onReset, selectedCategory }) => {
             <legend className="fieldset-legend text-slate-700 ">Sort By</legend>
             <select
               value={filters.sortBy}
-              className="select select-sm rounded-box text-slate-600 text-sm capitalize"
+              className="select select-sm rounded-box text-slate-600 focus:outline-slate-500 text-sm capitalize"
               onChange={(e) => {
                 setFilters({ ...filters, sortBy: e.target.value });
               }}

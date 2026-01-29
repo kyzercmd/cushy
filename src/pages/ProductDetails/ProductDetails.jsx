@@ -3,6 +3,7 @@ import { useLocation, useParams, useNavigate } from "react-router";
 import { useCart } from "../../providers/CartContext";
 import { useProductFetch } from "../../hooks/useProductFetch";
 import { PageNotFound } from "../PageNotFound/PageNotFound";
+import { useWishlist } from "../../providers/WishlistContext";
 
 import {
   ArrowUpFromLine,
@@ -12,11 +13,14 @@ import {
   CircleCheck,
   Plus,
   Minus,
+  Heart,
 } from "lucide-react";
 
 export const ProductDetails = () => {
-  const [showToast, setShowToast] = useState(false);
+  const [showCartToast, setShowCartToast] = useState(false);
+
   const { addToCart } = useCart();
+  const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
   const location = useLocation();
   const { sku } = useParams();
   const [itemCount, setItemCount] = useState(1);
@@ -47,11 +51,18 @@ export const ProductDetails = () => {
 
   const product = stateProduct || fetchProduct;
 
+  const handleWishlistToggle = (product) => {
+    isInWishlist(product)
+      ? removeFromWishlist(product)
+      : addToWishlist(product);
+    console.log("wishlist toggled");
+  };
+
   const handleAddToCart = (product, itemCount) => {
-    setShowToast(true);
+    setShowCartToast(true);
     addToCart(product, itemCount);
     setTimeout(() => {
-      setShowToast(false);
+      setShowCartToast(false);
     }, 3000);
   };
 
@@ -80,7 +91,7 @@ export const ProductDetails = () => {
           <div className="absolute inset-0 bg-slate-900/10"></div>
         </div>
 
-        <div className="w-full md:w-1/2 flex items-center px-10">
+        <div className="w-full md:w-1/2 flex items-center px-5 md:px-10">
           <div className="flex flex-col gap-2">
             <h1 className="text-4xl md:text-2xl font-bold text-slate-900 mb-4 leading-tight">
               {product.name}
@@ -130,7 +141,7 @@ export const ProductDetails = () => {
                   </div>
                 )}
               </div>
-              <div className="flex select-none">
+              <div className="flex select-none items-center">
                 <div className="border rounded-box border-slate-300 flex items-center justify-center gap-5 p-2 md:px-3 font-semibold">
                   <Minus
                     size={15}
@@ -154,12 +165,28 @@ export const ProductDetails = () => {
                 >
                   Add to Cart
                 </button>
+                <div
+                  onClick={() => {
+                    handleWishlistToggle(product);
+                  }}
+                  className={`btn btn-circle ${isInWishlist(product) ? "bg-red-50 hover:bg-red-100 border-red-200" : ""}`}
+                >
+                  <Heart
+                    size={50}
+                    strokeWidth={2}
+                    className={`p-2 ${
+                      isInWishlist(product)
+                        ? "fill-red-500 text-red-500"
+                        : "text-slate-600"
+                    }`}
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      {showToast && (
+      {showCartToast && (
         <div className="toast">
           <div className="bg-blue-500 p-4 rounded-xl flex justify-center items-center gap-2 text-sm font-semibold">
             <CircleCheck size={18} strokeWidth={2} className="text-slate-200" />

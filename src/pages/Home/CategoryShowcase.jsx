@@ -66,14 +66,14 @@ export const CategoryShowcase = () => {
         {data?.map((item) => (
           <SwiperSlide key={item.id}>
             <Link to={`/products?category=${item.category}`}>
-              <div className="border border-slate-700 rounded-xl flex items-end justify-center overflow-hidden">
+              <div className="border border-slate-600 rounded-xl flex items-end justify-center overflow-hidden">
                 <div className="relative w-full h-full object-cover hover:scale-103 transition-transform duration-300 overflow-hidden">
                   <img
                     src={item.image_path}
                     className="w-full h-80 object-cover"
                   ></img>
                 </div>
-                <div className="absolute text-xl font-semibold capitalize px-3 py-2 rounded-xl text-[#021431] bg-white/70 mb-3 z-50">
+                <div className="absolute text-base font-semibold capitalize px-5 py-3 rounded-xl text-[#021431] bg-slate-100/70 mb-3 z-50">
                   {item.category}
                 </div>
               </div>

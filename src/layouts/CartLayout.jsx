@@ -38,7 +38,7 @@ export const CartLayout = ({ children }) => {
                         <div className="text-slate-600">{item.quantity}</div>
                         <div className="mx-1 text-slate-600">x</div>
                         <div className="font-medium text-slate-800 ">
-                          ${item.discount_price || item.price}.00
+                          ${item.discount_price || item.price}
                         </div>
                       </div>
                     </div>
@@ -59,7 +59,7 @@ export const CartLayout = ({ children }) => {
             <div className="border-t border-slate-300 pt-4 mt-auto">
               <div className="flex justify-between text-lg font-semibold mb-4">
                 <span className="text-slate-700 text-base">Subtotal:</span>
-                <span className="text-blue-900 text-base">${subTotal}.00</span>
+                <span className="text-blue-900 text-base">${subTotal}</span>
               </div>
               <button className="btn btn-ghost text-sm font-normal bg-slate-900 hover:bg-slate-800 text-slate-200 btn-block">
                 CHECKOUT

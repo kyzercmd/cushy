@@ -56,7 +56,7 @@ export const ProductCard = ({ product }) => {
 
         <div className="flex justify-between">
           <div className="flex flex-row gap-2">
-            <div className="text-slate-800 pt-2 text-base font-semibold line-through decoration-red-800 decoration-1">
+            <div className="text-slate-700 pt-2 text-base font-semibold line-through decoration-slate-900 decoration-1">
               ${product.price}
             </div>
             <div className="text-slate-800 pt-2 text-base font-semibold">
