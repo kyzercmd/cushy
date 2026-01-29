@@ -1,7 +1,9 @@
+import { useState } from "react";
 import { useLocation, useParams, useNavigate } from "react-router";
 import { useCart } from "../../providers/CartContext";
 import { useProductFetch } from "../../hooks/useProductFetch";
 import { PageNotFound } from "../PageNotFound/PageNotFound";
+
 import {
   ArrowUpFromLine,
   ArrowLeftRight,
@@ -11,9 +13,9 @@ import {
   Plus,
   Minus,
 } from "lucide-react";
-import { useState } from "react";
 
 export const ProductDetails = () => {
+  const [showToast, setShowToast] = useState(false);
   const { addToCart } = useCart();
   const location = useLocation();
   const { sku } = useParams();
@@ -44,6 +46,14 @@ export const ProductDetails = () => {
   }
 
   const product = stateProduct || fetchProduct;
+
+  const handleAddToCart = (product, itemCount) => {
+    setShowToast(true);
+    addToCart(product, itemCount);
+    setTimeout(() => {
+      setShowToast(false);
+    }, 3000);
+  };
 
   return (
     <div className="lg:max-w-6xl max-w-11/12 m-auto overflow-hidden mb-10">
@@ -138,7 +148,7 @@ export const ProductDetails = () => {
                 </div>
                 <button
                   onClick={() => {
-                    addToCart(product, itemCount);
+                    handleAddToCart(product, itemCount);
                   }}
                   className="text-sm rounded-box font-bold text-slate-200 bg-slate-900 hover:border-slate-600 hover:bg-slate-800  transition-all hover:cursor-pointer p-3 md:px-10 border"
                 >
@@ -149,6 +159,14 @@ export const ProductDetails = () => {
           </div>
         </div>
       </div>
+      {showToast && (
+        <div className="toast">
+          <div className="bg-blue-500 p-4 rounded-xl flex justify-center items-center gap-2 text-sm font-semibold">
+            <CircleCheck size={18} strokeWidth={2} className="text-slate-200" />
+            <span className="text-slate-200">Added to cart successfully</span>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

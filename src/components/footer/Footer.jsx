@@ -11,7 +11,7 @@ export const Footer = () => {
             onClick={() => {
               window.scrollTo({ top: 0, left: 0, behavior: "instant" });
             }}
-            className="items-center gap-2 select-none inline-flex"
+            className="items-center gap-2 select-none inline-flex hover:cursor-pointer"
           >
             <div className="flex items-center justify-center w-10 h-10 bg-slate-700 text-blue-100 rounded-2xl shadow-sm">
               <Armchair size={26} strokeWidth={2} />
@@ -68,11 +68,11 @@ export const Footer = () => {
                   Subscribe to our Newsletter
                 </span>
               </label>
-              <div className="join mt-2 rounded-2xl">
+              <div className="join mt-2 rounded-2xl flex gap-1">
                 <input
                   type="text"
                   placeholder="username@site.com"
-                  className="input input-bordered join-item text-black w-full rounded-box"
+                  className="join-item text-black bg-slate-200 text-sm px-2 focus:outline-blue-300 focus:outline-2 focus:ring-4  w-full rounded-box"
                 />
                 <button className="btn btn-primary join-item bg-slate-600 border-none hover:bg-slate-500 rounded-box">
                   Subscribe
