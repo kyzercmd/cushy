@@ -2,7 +2,7 @@ import React from "react";
 import Background from "../../assets/our-collection.jpg";
 
 export const CategoryInfo = ({ data }) => {
-  console.log(data);
+  //console.log(data);
   return (
     <div className="rounded-2xl relative min-h-50 max-w-11/12 lg:max-w-6xl flex flex-col justify-center overflow-hidden m-auto text-center mt-5">
       <div className="absolute inset-0 z-0">

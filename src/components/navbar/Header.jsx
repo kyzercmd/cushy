@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router";
-import { Armchair, ShoppingBasket, Heart } from "lucide-react";
+import { Armchair, ShoppingBasket } from "lucide-react";
 import { LuBookHeart } from "react-icons/lu";
 import { useCart } from "../../providers/CartContext";
 import { useWishlist } from "../../providers/WishlistContext";
@@ -7,6 +7,12 @@ import { useWishlist } from "../../providers/WishlistContext";
 export const Header = () => {
   const { cartItems } = useCart();
   const { wishlistItems } = useWishlist();
+  const closeMenu = () => {
+    const elem = document.activeElement;
+    if (elem) {
+      elem.blur();
+    }
+  };
   return (
     <div className="navbar max-w-8xl mx-auto rounded-2xl py-1 bg-white shadow-sm">
       <div className="w-full md:max-w-6xl mx-auto flex justify-between">
@@ -15,7 +21,7 @@ export const Header = () => {
             <div
               tabIndex={0}
               role="button"
-              className="btn hover:bg-blue-50 hover:border-slate-500 btn-ghost lg:hidden"
+              className="btn btn-sm hover:bg-blue-50 hover:border-slate-500 btn-ghost lg:hidden"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -36,11 +42,12 @@ export const Header = () => {
             </div>
             <ul
               tabIndex="-1"
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow-sm flex flex-col gap-1"
             >
               <li>
                 <NavLink
                   to="/"
+                  onClick={closeMenu}
                   className={({ isActive }) =>
                     isActive
                       ? "active bg-[#021431] rounded-lg py-2 px-3 text-slate-200"
@@ -53,6 +60,7 @@ export const Header = () => {
               <li>
                 <NavLink
                   to="/about"
+                  onClick={closeMenu}
                   className={({ isActive }) =>
                     isActive
                       ? "active bg-[#021431] rounded-lg py-2 px-3 text-slate-200"
@@ -65,6 +73,7 @@ export const Header = () => {
               <li>
                 <NavLink
                   to="/products"
+                  onClick={closeMenu}
                   className={({ isActive }) =>
                     isActive
                       ? "active bg-[#021431] rounded-lg py-2 px-3 text-slate-200"
@@ -77,6 +86,7 @@ export const Header = () => {
               <li>
                 <NavLink
                   to="/contact"
+                  onClick={closeMenu}
                   className={({ isActive }) =>
                     isActive
                       ? "active bg-[#021431] rounded-lg py-2 px-3 text-slate-200"
@@ -101,7 +111,7 @@ export const Header = () => {
           </Link>
         </div>
         <div className="navbar-center hidden md:flex">
-          <ul className="menu menu-horizontal">
+          <ul className="menu menu-horizontal flex gap-1">
             <li>
               <NavLink
                 to="/"
@@ -152,7 +162,7 @@ export const Header = () => {
             </li>
           </ul>
         </div>
-        <div className="navbar-end flex gap-3 items-center text-center">
+        <div className="navbar-end flex gap-2 items-center text-center mr-2">
           <Link
             to="wishlist"
             className="indicator btn btn-ghost btn-circle btn-base text-slate-800"

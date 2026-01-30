@@ -6,14 +6,14 @@ import environment from "../../assets/Environment.svg";
 export const BrandPhilosophy = () => {
   return (
     <div className="mb-30">
-      <div className="lg:max-w-6xl max-w-11/12 m-auto px-5 mt-5 rounded-4xl bg-white  shadow-sm">
-        <div className="flex flex-col md:flex-row justify-between">
+      <div className="lg:max-w-6xl max-w-11/12 m-auto px-5 pb-5 md:pb-0 mt-5 rounded-4xl bg-white  shadow-sm">
+        <div className="flex flex-col md:flex-row items-center">
           <img
             src={timeflies}
             alt="Built to last"
             className="h-60 w-60 object-cover mr-2"
           ></img>
-          <div className=" flex-col flex justify-center">
+          <div className=" flex-col flex justify-center text-center md:text-start">
             <h1 className="text-[#021431] font-bold text-xl mb-2 font-[Urbanist]">
               Built for the Long Haul
             </h1>
@@ -26,14 +26,14 @@ export const BrandPhilosophy = () => {
           </div>
         </div>
       </div>
-      <div className="lg:max-w-6xl max-w-11/12 m-auto flex flex-col px-5 mt-2 rounded-4xl bg-white  shadow-sm">
-        <div className="flex flex-col md:flex-row justify-between">
+      <div className="lg:max-w-6xl max-w-11/12 m-auto flex flex-col px-5 md:pb-0 pb-5 mt-2 rounded-4xl bg-white  shadow-sm">
+        <div className="flex flex-col md:flex-row items-center">
           <img
             src={sleep}
             alt="Comfort"
             className="h-60 w-60 object-cover mr-2"
           ></img>
-          <div className=" flex-col flex justify-center ">
+          <div className=" flex-col flex justify-center text-center md:text-start">
             <h1 className="text-[#021431] font-bold text-xl mb-2 font-[Urbanist]">
               Comfort without Compromise
             </h1>
@@ -46,14 +46,14 @@ export const BrandPhilosophy = () => {
           </div>
         </div>
       </div>
-      <div className="lg:max-w-6xl max-w-11/12 m-auto flex flex-col px-5 mt-2 mb-10 rounded-4xl bg-white shadow-sm">
-        <div className="flex flex-col md:flex-row justify-between">
+      <div className="lg:max-w-6xl max-w-11/12 m-auto flex flex-col px-5 pb-5 md:pb-0 mt-2 mb-10 rounded-4xl bg-white shadow-sm">
+        <div className="flex flex-col md:flex-row items-center">
           <img
             src={environment}
             alt="Kinder to earth"
             className="h-60 w-60 object-cover  mr-2"
           ></img>
-          <div className=" flex-col flex  justify-center">
+          <div className=" flex-col flex  justify-center text-center md:text-start">
             <h1 className="text-[#021431] font-bold text-xl mb-2 font-[Urbanist]">
               Kind to the Home, Kinder to the Earth
             </h1>

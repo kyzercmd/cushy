@@ -60,7 +60,7 @@ export const AllProducts = () => {
         onReset={handleReset}
         selectedCategory={selectedCategory}
       />
-      <div className="max-w-6xl m-auto">
+      <div className="xl:max-w-6xl max-w-11/12 m-auto">
         <div className=" text-[#394E6A] text-xl tracking-widest mt-10">
           {totalItems} Products
         </div>

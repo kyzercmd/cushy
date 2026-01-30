@@ -16,17 +16,17 @@ export const BrandMission = () => {
         </p>
       </div>
       <div className="mt-10">
-        <div className="flex flex-col md:flex-row overflow-hidden min-h-50 rounded-4xl">
+        <div className="flex flex-col md:flex-row overflow-hidden min-h-50 rounded-4xl gap-5 md:gap-0">
           <div className="relative flex w-full md:w-1/2 md:h-auto rounded-4xl overflow-hidden">
             <img
               src={Story}
-              className="object-cover h-100 w-full rounded-4xl -scale-x-100"
+              className="object-cover md:h-full md:absolute md:inset-0 h-100 w-full rounded-4xl -scale-x-100"
             ></img>
           </div>
 
           <div className="w-full md:w-1/2 flex items-center md:p-10">
-            <div>
-              <h2 className="md:text-2xl text-xl font-semibold text-slate-900 mb-6 leading-tight font-[Playfair-Display]">
+            <div className="text-center md:text-start">
+              <h2 className="md:text-2xl text-xl font-semibold text-slate-900 mb-4 leading-tight font-[Playfair-Display]">
                 Born from a Search for Better
               </h2>
               <p className="text-slate-600 text-base mb-8 leading-relaxed">

@@ -11,7 +11,7 @@ export const SearchFilter = ({ onSearch, onReset, selectedCategory }) => {
   });
 
   return (
-    <div className="max-w-6xl bg-white border border-base-300 shadow-sm m-auto flex flex-col mt-5 p-5 rounded-2xl">
+    <div className="lg:max-w-6xl max-w-11/12 bg-white border border-base-300 shadow-sm m-auto flex flex-col mt-5 p-5 rounded-2xl">
       <div className="flex flex-wrap justify-around">
         <div>
           <fieldset className="fieldset w-55">

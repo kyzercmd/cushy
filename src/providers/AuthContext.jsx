@@ -45,15 +45,15 @@ export const AuthContextProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    console.log("observer running");
+    //console.log("observer running");
     const observer = onAuthStateChanged(auth, (currentUser) => {
-      console.log("Auth changed");
+      //console.log("Auth changed");
 
       setUser(currentUser);
       setLoading(false);
     });
     return () => {
-      console.log("stopping");
+      //console.log("stopping");
       observer();
     };
   }, []);

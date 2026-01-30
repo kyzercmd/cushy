@@ -8,7 +8,7 @@ export const Wishlist = () => {
 
   return (
     <div className="md:max-w-6xl max-w-11/12 m-auto my-10">
-      <div className="pb-4  text-center flex flex-col gap-3 mb-5">
+      <div className="pb-4 text-center flex flex-col gap-3 mb-5">
         <h1 className="text-4xl md:text-5xl font-light tracking-[0.2em] uppercase text-slate-800 ">
           Wishlist
         </h1>
@@ -69,7 +69,7 @@ export const Wishlist = () => {
           ))}
         </div>
       ) : (
-        <div className="flex w-100 m-auto ">
+        <div className="flex mx-auto w-full sm:w-100 justify-center">
           <img src={empty} className="w-full h-full object-cover"></img>
         </div>
       )}

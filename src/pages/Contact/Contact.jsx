@@ -14,7 +14,7 @@ export const Contact = () => {
 
   const onSubmit = async (data) => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
-    console.log(data);
+    //console.log(data);
     setSubmitted(true);
   };
 
@@ -52,7 +52,7 @@ export const Contact = () => {
                   },
                 })}
                 type="text"
-                className="border border-gray-500 focus:outline-1 focus:ring-0 focus:bg-slate-100 focus:shadow-2xl text-sm p-2 rounded-xl w-full"
+                className="border border-slate-600 focus:shadow-2xl focus:bg-blue-50 focus:ring-0 focus:outline-0 transition-all duration-200 ease-in-out focus:scale-[1.01] text-sm p-2 rounded-xl w-full"
                 placeholder="Your Name"
               ></input>
               {errors.name && (
@@ -77,7 +77,7 @@ export const Contact = () => {
                   },
                 })}
                 type="text"
-                className="border border-gray-500 focus:outline-1 focus:ring-0 focus:bg-slate-100 focus:shadow-2xl text-sm p-2 rounded-xl w-full"
+                className="border border-slate-600 focus:shadow-2xl focus:bg-blue-50 focus:ring-0 focus:outline-0 transition-all duration-200 ease-in-out focus:scale-[1.01] text-sm p-2 rounded-xl w-full"
                 placeholder="Number"
               ></input>
               {errors.number && (
@@ -100,7 +100,7 @@ export const Contact = () => {
                   },
                 })}
                 type="text"
-                className="border border-gray-500 focus:outline-1 focus:ring-0 focus:bg-slate-100 focus:shadow-2xl text-sm p-2 rounded-xl w-full"
+                className="border border-slate-600 focus:shadow-2xl focus:bg-blue-50 focus:ring-0 focus:outline-0 transition-all duration-200 ease-in-out focus:scale-[1.01] text-sm p-2 rounded-xl w-full"
                 placeholder="Email"
               ></input>
               {errors.email && (
@@ -110,7 +110,7 @@ export const Contact = () => {
 
             <textarea
               {...register("message")}
-              className="textarea textarea-ghost w-full border border-gray-500 focus:outline-0 focus:ring-1 focus:bg-slate-100 focus:shadow-2xl text-sm p-2 rounded-xl"
+              className="textarea textarea-ghost w-full border border-slate-600 focus:shadow-2xl focus:bg-blue-50 focus:ring-0 focus:outline-0 transition-all duration-200 ease-in-out focus:scale-[1.01] text-sm p-2 rounded-xl"
               placeholder="Message"
             ></textarea>
           </div>

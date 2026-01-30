@@ -14,7 +14,7 @@ export const WishlistContextProvider = ({ children }) => {
 
   useEffect(() => {
     localStorage.setItem("eversoft_wishlist", JSON.stringify(wishlistItems));
-    console.log("wishlist saved");
+    //console.log("wishlist saved");
   }, [wishlistItems]);
 
   const addToWishlist = (product) => {

@@ -14,7 +14,7 @@ export const CartContextProvider = ({ children }) => {
 
   useEffect(() => {
     localStorage.setItem("eversoft_cart", JSON.stringify(cartItems));
-    console.log("cart saved");
+    //console.log("cart saved");
   }, [cartItems]);
 
   const addToCart = (product, quantity = 1) => {

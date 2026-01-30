@@ -25,7 +25,7 @@ export const RegisterForm = () => {
   };
 
   const handleRegisterSubmit = async (data) => {
-    console.log(data);
+    //console.log(data);
 
     await createUser(data.email, data.password)
       .then(async (result) => {
@@ -37,7 +37,7 @@ export const RegisterForm = () => {
           });
         }
         reset();
-        console.log("user set");
+        //console.log("user set");
         Navigate("/");
       })
       .catch((error) => {
@@ -124,7 +124,7 @@ export const RegisterForm = () => {
                 placeholder="Password"
               ></input>
               <div
-                className="absolute right-2 top-2"
+                className="absolute right-2 top-2 hover:cursor-pointer"
                 onClick={handleHidePassword}
               >
                 {hidePassword ? (
@@ -180,7 +180,7 @@ export const RegisterForm = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="bg-blue-500 text-sm text-center p-2 rounded-box text-slate-200 font-semibold disabled:opacity-50 select-none"
+              className="bg-blue-500 text-sm text-center p-2 rounded-box text-slate-200 font-semibold disabled:opacity-50 select-none hover:cursor-pointer"
             >
               Create Account
             </button>

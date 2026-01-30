@@ -11,7 +11,7 @@ export const CategoryShowcase = () => {
   const { data, isLoading, isError } = useCategoryFetch();
 
   if (isError) return <div>Error.</div>;
-  console.log(data);
+  //console.log(data);
 
   return (
     <div className="lg:max-w-6xl max-w-11/12 mx-auto my-30">

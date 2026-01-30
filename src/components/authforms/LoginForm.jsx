@@ -25,7 +25,7 @@ export const LoginForm = () => {
   const { signIn, googleSignIn } = UserAuth();
 
   const handleEmailLogin = async (data) => {
-    console.log(data);
+    //console.log(data);
 
     try {
       await signIn(data.email, data.password);
@@ -112,7 +112,7 @@ export const LoginForm = () => {
               placeholder="Password"
             ></input>
             <div
-              className="absolute right-2 top-2"
+              className="absolute right-2 top-2 hover:cursor-pointer"
               onClick={handleHidePassword}
             >
               {hidePassword ? (
@@ -141,7 +141,7 @@ export const LoginForm = () => {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="bg-blue-500 hover:bg-blue-600 transition-colors duration-200 text-sm text-center p-2 rounded-box text-slate-200 font-semibold disabled:opacity-50 select-none"
+            className="bg-blue-500 hover:bg-blue-600 transition-colors duration-200 text-sm text-center p-2 rounded-box text-slate-200 font-semibold disabled:opacity-50 select-none hover:cursor-pointer"
           >
             Sign In
           </button>
@@ -150,7 +150,7 @@ export const LoginForm = () => {
         <button
           onClick={handleGoogleLogin}
           type="submit"
-          className="text-center text-sm bg-gray-200 hover:bg-gray-300 transition-colors duration-200  p-2 rounded-box font-semibold flex justify-center items-center gap-2 w-full"
+          className="text-center text-sm bg-gray-200 hover:bg-gray-300 transition-colors duration-200  p-2 rounded-box font-semibold flex justify-center items-center gap-2 w-full hover:cursor-pointer"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

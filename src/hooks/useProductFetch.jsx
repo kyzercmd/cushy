@@ -48,11 +48,11 @@ export const useProductFetch = ({
       if (sortBy != "name_asc") url += `&sort=${sortBy}`;
       if (maxPrice < 2000) url += `&max_price=${maxPrice}`;
 
-      console.log("Fetching products now...");
+      //console.log("Fetching products now...");
 
       const response = await fetch(url);
 
-      console.log("test");
+      //console.log("test");
       if (!response.ok) throw new Error("Failed to fetch products");
       return await response.json();
     },

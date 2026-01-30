@@ -55,7 +55,7 @@ export const ProductDetails = () => {
     isInWishlist(product)
       ? removeFromWishlist(product)
       : addToWishlist(product);
-    console.log("wishlist toggled");
+    //console.log("wishlist toggled");
   };
 
   const handleAddToCart = (product, itemCount) => {
@@ -99,11 +99,11 @@ export const ProductDetails = () => {
             <p className="text-stone-600 text-lg font-bold">
               Finish: {product.finish}
             </p>
-            <div className="flex flex-row gap-2 text-xl text-blue-900">
-              <div className=" pt-2  font-semibold line-through decoration-red-900 decoration-2">
+            <div className="flex flex-row gap-2 text-xl text-slate-600">
+              <div className=" pt-2  font-semibold line-through decoration-slate-900 decoration-2">
                 ${product.price}
               </div>
-              <div className=" pt-2  font-semibold">
+              <div className=" pt-2  font-semibold text-slate-900">
                 ${product.discount_price}.00
               </div>
             </div>
@@ -143,19 +143,25 @@ export const ProductDetails = () => {
               </div>
               <div className="flex select-none items-center">
                 <div className="border rounded-box border-slate-300 flex items-center justify-center gap-5 p-2 md:px-3 font-semibold">
-                  <Minus
-                    size={15}
+                  <button
                     onClick={() => {
                       setItemCount(itemCount - 1);
                     }}
-                  />
+                    disabled={itemCount <= 1}
+                    className="hover:cursor-pointer disabled:opacity-50"
+                  >
+                    <Minus size={15} />
+                  </button>
+
                   <span>{itemCount}</span>
-                  <Plus
-                    size={15}
+                  <button
                     onClick={() => {
                       setItemCount(itemCount + 1);
                     }}
-                  />
+                    className="hover:cursor-pointer disabled:opacity-50"
+                  >
+                    <Plus size={15} />
+                  </button>
                 </div>
                 <button
                   onClick={() => {
