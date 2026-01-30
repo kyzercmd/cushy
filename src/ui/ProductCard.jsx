@@ -18,7 +18,7 @@ export const ProductCard = ({ product }) => {
             <Link
               to={`/products/${product.sku}`}
               state={{ product }}
-              className="bg-slate-800/90 text-slate-200 w-full p-3 z-10 absolute bottom-0 justify-center text-center m-auto items-center translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 text-sm font-semibold hover:cursor-pointer"
+              className="bg-slate-800/90 text-slate-200 w-full p-3 z-10 absolute bottom-0 justify-center text-center m-auto items-center md:translate-y-full md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-300 text-sm font-semibold hover:cursor-pointer"
             >
               View Details
             </Link>

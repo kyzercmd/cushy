@@ -24,17 +24,17 @@ export const Wishlist = () => {
               className="flex justify-between items-center p-3 bg-white mb-2 rounded-2xl shadow-sm hover:scale-101 transition-all duration-300 group"
             >
               <div className="flex">
-                <div className="w-30 rounded-md overflow-hidden mr-3">
+                <div className="w-25 h-25 rounded-md overflow-hidden mr-3 flex-shrink-0">
                   <img
                     src={item.image_path}
                     className="h-full w-full object-cover"
                   ></img>
                 </div>
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-2 flex-wrap">
                   <Link
                     to={`/products/${item.sku}`}
                     state={item}
-                    className="text-base font-medium flex flex-wrap text-slate-800 group-hover:text-blue-400 hover:link transition-colors duration-300"
+                    className="text-sm md:text-base font-medium flex text-slate-800 group-hover:text-blue-400 hover:link transition-colors duration-300"
                   >
                     {item.name}
                   </Link>
