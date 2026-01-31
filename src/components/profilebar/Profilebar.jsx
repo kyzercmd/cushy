@@ -18,7 +18,7 @@ export const Profilebar = () => {
   return (
     <>
       <div className="border p-2 bg-[#021431]">
-        <div className="flex justify-end max-w-11/12 xl:max-w-7xl m-auto mr-10">
+        <div className="flex justify-end max-w-11/12 xl:max-w-7xl m-auto">
           {user ? (
             <div>
               <span className="hover:link text-slate-300 text-sm mr-5">
