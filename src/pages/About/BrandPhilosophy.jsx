@@ -5,11 +5,12 @@ import environment from "../../assets/Environment.svg";
 
 export const BrandPhilosophy = () => {
   return (
-    <div className="mb-30">
-      <div className="lg:max-w-6xl max-w-11/12 m-auto px-5 pb-5 md:pb-0 mt-5 rounded-4xl bg-white  shadow-sm">
+    <div className="mb-30 xl:max-w-7xl max-w-11/12 mx-auto">
+      <div className=" px-5 pb-5 md:pb-0 mt-5 rounded-4xl bg-white  shadow-sm">
         <div className="flex flex-col md:flex-row items-center">
           <img
             src={timeflies}
+            loading="lazy"
             alt="Built to last"
             className="h-60 w-60 object-cover mr-2"
           ></img>
@@ -26,10 +27,11 @@ export const BrandPhilosophy = () => {
           </div>
         </div>
       </div>
-      <div className="lg:max-w-6xl max-w-11/12 m-auto flex flex-col px-5 md:pb-0 pb-5 mt-2 rounded-4xl bg-white  shadow-sm">
+      <div className=" flex flex-col px-5 md:pb-0 pb-5 mt-2 rounded-4xl bg-white  shadow-sm">
         <div className="flex flex-col md:flex-row items-center">
           <img
             src={sleep}
+            loading="lazy"
             alt="Comfort"
             className="h-60 w-60 object-cover mr-2"
           ></img>
@@ -46,10 +48,11 @@ export const BrandPhilosophy = () => {
           </div>
         </div>
       </div>
-      <div className="lg:max-w-6xl max-w-11/12 m-auto flex flex-col px-5 pb-5 md:pb-0 mt-2 mb-10 rounded-4xl bg-white shadow-sm">
+      <div className=" flex flex-col px-5 pb-5 md:pb-0 mt-2 mb-10 rounded-4xl bg-white shadow-sm">
         <div className="flex flex-col md:flex-row items-center">
           <img
             src={environment}
+            loading="lazy"
             alt="Kinder to earth"
             className="h-60 w-60 object-cover  mr-2"
           ></img>

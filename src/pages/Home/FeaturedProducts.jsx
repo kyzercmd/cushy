@@ -13,7 +13,7 @@ export const FeaturedProducts = () => {
   if (isError) return <div>Error: {error.message}</div>;
   //if (isLoading) return <div>Loading...</div>;
   return (
-    <div className="lg:max-w-6xl max-w-11/12 mx-auto my-30">
+    <div className="xl:max-w-6xl max-w-11/12 mx-auto my-30">
       <div className="flex flex-col m-auto text-center">
         <div className=" text-[#021431] text-3xl tracking-widest font-medium font-[Instrument-sans]">
           Featured Collection

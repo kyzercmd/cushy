@@ -7,7 +7,7 @@ export const Wishlist = () => {
   const { wishlistItems, removeFromWishlist } = useWishlist();
 
   return (
-    <div className="md:max-w-6xl max-w-11/12 m-auto my-10">
+    <div className="xl:max-w-6xl max-w-11/12 min-h-screen m-auto my-10">
       <div className="pb-4 text-center flex flex-col gap-3 mb-5">
         <h1 className="text-4xl md:text-5xl font-light tracking-[0.2em] uppercase text-slate-800 ">
           Wishlist
@@ -24,7 +24,7 @@ export const Wishlist = () => {
               className="flex justify-between items-center p-3 bg-white mb-2 rounded-2xl shadow-sm hover:scale-101 transition-all duration-300 group"
             >
               <div className="flex">
-                <div className="w-25 h-25 rounded-md overflow-hidden mr-3 flex-shrink-0">
+                <div className="w-25 h-25 rounded-md overflow-hidden mr-3 shrink-0">
                   <img
                     src={item.image_path}
                     className="h-full w-full object-cover"

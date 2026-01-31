@@ -7,6 +7,7 @@ export const Contact = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors, isSubmitting },
   } = useForm();
 
@@ -14,6 +15,7 @@ export const Contact = () => {
 
   const onSubmit = async (data) => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
+    reset();
     //console.log(data);
     setSubmitted(true);
   };

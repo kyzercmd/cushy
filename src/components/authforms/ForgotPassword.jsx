@@ -10,20 +10,22 @@ export const ForgotPassword = () => {
   const [sendStatus, setSendStatus] = useState(false);
   const { passwordReset } = UserAuth();
 
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting },
+  } = useForm();
+
   const handleLoginSubmit = async (data) => {
     try {
       await passwordReset(data.email);
       setSendStatus(true);
+      reset();
     } catch (error) {
       console.log(error);
     }
   };
-
-  const {
-    register,
-    handleSubmit,
-    formState: { errors, isSubmitting },
-  } = useForm();
 
   return (
     <motion.div
@@ -32,7 +34,7 @@ export const ForgotPassword = () => {
       transition={{
         duration: 0.3,
       }}
-      className="min-h-screen lg:px-30 px-10 pt-5 md:pt-15 bg-white flex-col flex gap-10"
+      className="min-h-screen xl:px-30 px-10 pt-5 md:pt-15 bg-white flex-col flex gap-10"
     >
       <div className="text-center">
         <Link

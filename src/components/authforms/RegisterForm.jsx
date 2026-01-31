@@ -53,7 +53,7 @@ export const RegisterForm = () => {
         duration: 0.3,
       }}
     >
-      <div className="min-h-screen lg:px-30 pt-5 md:p-15 px-10 bg-white">
+      <div className="min-h-screen xl:px-30 pt-5 md:p-15 px-10 bg-white">
         <div className="text-center">
           <Link
             to="/"

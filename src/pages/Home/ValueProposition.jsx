@@ -10,7 +10,7 @@ import {
 
 export const ValueProposition = () => {
   return (
-    <div className="lg:max-w-6xl max-w-11/12 mx-auto bg-[#021431] lg:p-20 p-5 rounded-4xl shadow-sm my-30">
+    <div className="xl:max-w-7xl max-w-11/12 mx-auto bg-[#021431] lg:p-20 p-5 rounded-4xl shadow-sm my-30">
       <div className=" flex flex-col m-auto text-center">
         <div className=" text-slate-200 text-4xl  font-extrabold">
           Why Choose <span className="text-blue-500">Ever</span>Soft

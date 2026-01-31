@@ -14,8 +14,8 @@ export const Header = () => {
     }
   };
   return (
-    <div className="navbar max-w-8xl mx-auto rounded-2xl py-1 bg-white shadow-sm">
-      <div className="w-full md:max-w-6xl mx-auto flex justify-between">
+    <div className="navbar xl:max-w-7xl max-w-11/12 mx-auto rounded-2xl py-1 bg-white shadow-sm">
+      <div className="w-full  mx-auto flex justify-between">
         <div className="navbar-start">
           <div className="dropdown">
             <div
@@ -162,20 +162,20 @@ export const Header = () => {
             </li>
           </ul>
         </div>
-        <div className="navbar-end flex gap-2 items-center text-center mr-2">
+        <div className="navbar-end flex items-center text-center mr-2 md:gap-3">
           <Link
             to="wishlist"
             className="indicator btn btn-ghost btn-circle btn-base text-slate-800"
           >
             <LuBookHeart size={20} strokeWidth={2} />
-            <span className="badge badge-sm bg-blue-200 text-slate-900 badge-ghost indicator-item badge-info">
+            <span className="badge badge-xs md:badge-sm bg-blue-200 text-slate-900 badge-ghost indicator-item badge-info">
               {wishlistItems.length}
             </span>
           </Link>
           <label htmlFor="my-drawer-5">
             <div className="indicator btn btn-ghost btn-circle btn-base text-slate-800">
               <ShoppingBasket size={20} strokeWidth={2} />
-              <span className="badge badge-sm bg-blue-200 text-slate-900 badge-ghost indicator-item badge-info">
+              <span className="badge badge-xs md:badge-sm bg-blue-200 text-slate-900 badge-ghost indicator-item badge-info">
                 {cartItems.length}
               </span>
             </div>

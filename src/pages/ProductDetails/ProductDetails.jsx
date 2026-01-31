@@ -67,7 +67,7 @@ export const ProductDetails = () => {
   };
 
   return (
-    <div className="lg:max-w-6xl max-w-11/12 m-auto overflow-hidden mb-10">
+    <div className="xl:max-w-6xl max-w-11/12 m-auto overflow-hidden mb-10">
       <div className="breadcrumbs text-base mt-10 select-none">
         <ul>
           <li

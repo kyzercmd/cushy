@@ -53,7 +53,7 @@ export const LoginForm = () => {
       transition={{
         duration: 0.3,
       }}
-      className="min-h-screen lg:px-30 pt-5 md:pt-15 px-10 bg-white"
+      className="min-h-screen xl:px-30 pt-5 md:pt-15 px-10 bg-white"
     >
       <div className=" text-center flex-col flex justify-center items-center">
         <Link

@@ -4,7 +4,7 @@ import { SquareArrowOutUpRight } from "lucide-react";
 
 export const Faq = () => {
   return (
-    <div className="lg:max-w-6xl max-w-11/12 m-auto my-30">
+    <div className="xl:max-w-7xl max-w-11/12 m-auto my-30">
       <div className=" flex flex-col mx-auto text-center mb-5 ">
         <div className=" text-[#021431] text-3xl tracking-widest  font-medium font-[Instrument-sans]">
           Frequenty Asked Questions (FAQs)

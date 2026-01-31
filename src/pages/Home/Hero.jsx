@@ -3,12 +3,10 @@ import Typewriter from "typewriter-effect";
 
 import hero1 from "../../assets/hero1.png";
 import hero2 from "../../assets/hero2.png";
-import hero3 from "../../assets/hero3.png";
-import hero4 from "../../assets/hero4.png";
 
 export const Hero = () => {
   return (
-    <div className="lg:max-w-6xl max-w-11/12 mx-auto flex justify-between shadow-sm bg-white p-10 md:15 mt-5 mb-5 rounded-4xl ">
+    <div className="xl:max-w-7xl max-w-11/12 mx-auto flex justify-between shadow-sm bg-white p-10 md:15 mt-5 mb-5 rounded-4xl ">
       <div className="flex-col flex gap-10 lg:max-w-1/2 mt-5 lg:pr-20">
         <div className="text-5xl md:text-6xl tracking-tighter font-bold text-[#394E6A] max-w-10/12 font-[Instrument-sans] antialiased">
           The New Standard of{" "}
@@ -50,20 +48,6 @@ export const Hero = () => {
             <img
               src={hero2}
               alt="elegance"
-              className="rounded-2xl w-80 h-105 object-cover"
-            />
-          </div>
-          <div className="carousel-item">
-            <img
-              src={hero3}
-              alt="presence"
-              className="rounded-2xl w-80 h-105 object-cover"
-            />
-          </div>
-          <div className="carousel-item">
-            <img
-              src={hero4}
-              alt="longevity"
               className="rounded-2xl w-80 h-105 object-cover"
             />
           </div>
